@@ -1,0 +1,699 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+<title>Espaço Maiury Oliveira — Onde toda mulher descobre que já nasceu rainha</title>
+<meta name="description" content="O primeiro salão de beleza premium do Campo Limpo, Feira de Santana. Terça a Sábado, 08h às 20h.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<style>
+/* ═══════════════════════════════════════════════════
+   ESPAÇO MAIURY OLIVEIRA — Realeza Negra Editorial
+   Noir #07060A · Vinho #3D0C24 · Ouro #C9A84C · Marfim #F8F4EE
+═══════════════════════════════════════════════════ */
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+:root{
+  --noir:#07060A;
+  --vinho:#3D0C24;
+  --ouro:#C9A84C;
+  --ouro-luz:#E8C96B;
+  --marfim:#F8F4EE;
+  --marfim-55:rgba(248,244,238,.55);
+  --marfim-30:rgba(248,244,238,.3);
+  --ouro-15:rgba(201,168,76,.15);
+  --ouro-30:rgba(201,168,76,.3);
+  --cinzel:'Cinzel',serif;
+  --corm:'Cormorant Garamond',serif;
+  --dm:'DM Sans',sans-serif;
+}
+html{scroll-behavior:smooth}
+body{background:var(--noir);color:var(--marfim);font-family:var(--dm);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+
+/* grain cinematográfico */
+body::after{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.035;
+  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+/* ── PRELOADER ── */
+.preloader{position:fixed;inset:0;z-index:9999;background:var(--noir);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .7s ease,visibility .7s}
+.preloader.done{opacity:0;visibility:hidden}
+.pre-mono{font-family:var(--corm);font-size:72px;font-weight:300;font-style:italic;color:var(--marfim);letter-spacing:6px}
+.pre-mono em{color:var(--ouro-luz);font-style:italic}
+.pre-line{width:160px;height:1px;background:rgba(201,168,76,.2);position:relative;overflow:hidden}
+.pre-line::after{content:'';position:absolute;inset:0;background:var(--ouro);transform:translateX(-100%);animation:sweep 1.1s cubic-bezier(.65,0,.35,1) forwards}
+@keyframes sweep{to{transform:translateX(0)}}
+
+/* ── CURSOR-JOIA ── */
+.cursor{position:fixed;top:0;left:0;width:12px;height:12px;border-radius:50%;background:var(--ouro);z-index:9995;pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border .25s;mix-blend-mode:difference}
+.cursor.grow{width:40px;height:40px;background:transparent;border:1px solid var(--ouro)}
+@media(hover:none){.cursor{display:none}}
+
+/* ── TOPBAR ── */
+.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,56px);background:rgba(7,6,10,.92);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .4s}
+.topbar.scrolled{border-bottom-color:var(--ouro-30)}
+.tb-logo{font-family:var(--cinzel);font-size:11px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase;line-height:1.4;cursor:pointer}
+.tb-logo span{display:block;font-size:8px;letter-spacing:4px;color:rgba(201,168,76,.5)}
+.tb-nav{display:flex;align-items:center;gap:24px}
+.tb-ig{font-family:var(--dm);font-size:12px;letter-spacing:1px;color:var(--marfim-55);text-decoration:none;text-transform:uppercase;transition:color .3s}
+.tb-ig:hover{color:var(--ouro-luz)}
+.tb-cta{font-family:var(--cinzel);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#000;background:linear-gradient(135deg,var(--ouro),var(--ouro-luz));padding:11px 22px;border-radius:30px;cursor:pointer;text-decoration:none;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
+.tb-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px var(--ouro-30)}
+
+/* ── HERO ── */
+.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:clamp(24px,4vw,64px);padding:120px clamp(20px,5vw,72px) 60px;position:relative}
+.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase;border:1px solid var(--ouro-30);padding:7px 16px;border-radius:30px;margin-bottom:34px}
+.hero h1{font-family:var(--corm);font-weight:300;font-size:clamp(48px,7.4vw,116px);line-height:.98;letter-spacing:-1px;color:var(--marfim)}
+.hero h1 .l{display:block;overflow:hidden}
+.hero h1 .l span{display:block;transform:translateY(110%);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
+.hero h1 .l:nth-child(2) span{animation-delay:.12s}
+.hero h1 .l:nth-child(3) span{animation-delay:.24s}
+.hero h1 .reina{font-style:italic;font-weight:500;color:var(--ouro-luz)}
+@keyframes rise{to{transform:translateY(0)}}
+.hero-meta{display:flex;align-items:center;gap:14px;margin:30px 0 38px;font-size:13px;color:var(--marfim-55);letter-spacing:.5px}
+.hero-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ouro)}
+.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
+.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--cinzel);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:16px 34px;border-radius:40px;cursor:pointer;border:none;transition:all .35s cubic-bezier(.34,1.56,.64,1);text-decoration:none}
+.btn-ouro{background:linear-gradient(135deg,var(--ouro),var(--ouro-luz));color:#000;font-weight:500}
+.btn-ouro:hover{transform:translateY(-3px);box-shadow:0 16px 40px var(--ouro-30)}
+.btn-ghost{background:transparent;color:var(--ouro);border:1px solid var(--ouro-30)}
+.btn-ghost:hover{border-color:var(--ouro);background:var(--ouro-15)}
+.hero-right{position:relative;display:flex;justify-content:center}
+.arch{position:relative;width:min(100%,420px);aspect-ratio:3/4.1}
+.arch-img{width:100%;height:100%;border-radius:50% 50% 0 0/38% 38% 0 0;overflow:hidden;position:relative}
+.arch-img img{width:100%;height:110%;object-fit:cover;will-change:transform}
+.arch-frame{position:absolute;inset:-14px;border:1px solid var(--ouro-30);border-radius:50% 50% 0 0/38% 38% 0 0;pointer-events:none}
+.arch-caption{position:absolute;bottom:-14px;right:-8px;background:var(--vinho);border:1px solid var(--ouro-30);padding:14px 20px;font-family:var(--cinzel);font-size:9px;letter-spacing:2px;color:var(--ouro-luz);text-transform:uppercase}
+.hero-scroll{position:absolute;bottom:28px;left:clamp(20px,5vw,72px);font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--marfim-30);text-transform:uppercase;animation:pulse 2.4s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.9}}
+
+/* ── MARQUEE ── */
+.marquee{background:var(--vinho);border-top:1px solid var(--ouro-15);border-bottom:1px solid var(--ouro-15);overflow:hidden;padding:18px 0}
+.mq-track{display:flex;gap:48px;white-space:nowrap;animation:mq 30s linear infinite;width:max-content}
+.mq-track span{font-family:var(--corm);font-style:italic;font-size:26px;font-weight:300;color:var(--marfim);display:flex;align-items:center;gap:48px}
+.mq-track i{font-style:normal;color:var(--ouro);font-size:16px}
+@keyframes mq{to{transform:translateX(-50%)}}
+
+/* ── SECTION BASE ── */
+.sec{padding:clamp(70px,10vw,130px) clamp(20px,5vw,72px);max-width:1340px;margin:0 auto}
+.sec-eyebrow{font-family:var(--cinzel);font-size:10px;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:14px}
+.sec-eyebrow::after{content:'';width:54px;height:1px;background:var(--ouro-30)}
+.sec-title{font-family:var(--corm);font-weight:300;font-size:clamp(36px,5vw,58px);line-height:1.05;color:var(--marfim);margin-bottom:14px}
+.sec-title em{font-style:italic;color:var(--ouro-luz)}
+.sec-sub{font-size:14px;color:var(--marfim-55);max-width:480px;line-height:1.7}
+
+/* reveal on scroll */
+.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
+.rv.in{opacity:1;transform:translateY(0)}
+
+/* ── SERVIÇOS — índice editorial ── */
+.svc-list{margin-top:54px;border-top:1px solid rgba(248,244,238,.08)}
+.svc-row{display:grid;grid-template-columns:70px 1fr auto auto 40px;align-items:center;gap:clamp(14px,3vw,40px);padding:30px 8px;border-bottom:1px solid rgba(248,244,238,.08);cursor:pointer;transition:padding .35s,background .35s}
+.svc-row:hover{background:rgba(201,168,76,.04);padding-left:22px}
+.svc-num{font-family:var(--cinzel);font-size:11px;letter-spacing:2px;color:var(--marfim-30);transition:color .3s}
+.svc-row:hover .svc-num{color:var(--ouro)}
+.svc-thumb{display:none}
+.svc-name{font-family:var(--corm);font-size:clamp(24px,3vw,36px);font-weight:400;color:var(--marfim);transition:color .3s;line-height:1.1}
+.svc-name small{display:block;font-family:var(--dm);font-size:12px;color:var(--marfim-55);font-weight:300;margin-top:4px;letter-spacing:.3px}
+.svc-row:hover .svc-name{color:var(--ouro-luz)}
+.svc-dur{font-family:var(--dm);font-size:12px;color:var(--marfim-55);letter-spacing:.5px;white-space:nowrap}
+.svc-price{font-family:var(--corm);font-style:italic;font-size:clamp(20px,2.4vw,28px);color:var(--ouro);white-space:nowrap}
+.svc-arrow{font-size:18px;color:var(--marfim-30);transition:transform .35s,color .3s}
+.svc-row:hover .svc-arrow{transform:translateX(6px);color:var(--ouro)}
+/* foto flutuante */
+.float-img{position:fixed;width:280px;height:340px;border-radius:50% 50% 0 0/30% 30% 0 0;overflow:hidden;pointer-events:none;z-index:80;opacity:0;transform:scale(.92);transition:opacity .35s,transform .45s cubic-bezier(.16,1,.3,1);border:1px solid var(--ouro-30)}
+.float-img.on{opacity:1;transform:scale(1)}
+.float-img img{width:100%;height:100%;object-fit:cover}
+
+/* ── MANIFESTO + NÚMEROS ── */
+.manifesto{text-align:center}
+.manifesto blockquote{font-family:var(--corm);font-style:italic;font-weight:300;font-size:clamp(26px,4vw,42px);line-height:1.3;color:var(--marfim);max-width:760px;margin:0 auto 70px}
+.manifesto blockquote em{color:var(--ouro-luz)}
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(248,244,238,.08);border:1px solid rgba(248,244,238,.08)}
+.stat{background:var(--noir);padding:46px 20px;text-align:center}
+.stat-n{font-family:var(--corm);font-style:italic;font-size:clamp(48px,7vw,84px);font-weight:300;color:var(--ouro);line-height:1}
+.stat-l{font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--marfim-55);text-transform:uppercase;margin-top:12px}
+
+/* ── SOBRE A MAIURY ── */
+.sobre-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,64px);align-items:center}
+.sobre-img{position:relative;width:min(100%,360px);aspect-ratio:4/5;margin:0 auto}
+.sobre-img .arch-img{width:100%;height:100%;border-radius:50% 50% 0 0/26% 26% 0 0;overflow:hidden}
+.sobre-img .arch-img img{width:100%;height:100%;object-fit:cover}
+.sobre-img .arch-frame{position:absolute;inset:-12px;border:1px solid var(--ouro-30);border-radius:50% 50% 0 0/26% 26% 0 0;pointer-events:none}
+.sobre-txt p{font-size:15px;line-height:1.8;color:var(--marfim-55);margin-bottom:18px;max-width:520px}
+.sobre-txt .btn{margin-top:8px}
+@media(max-width:900px){.sobre-grid{grid-template-columns:1fr;text-align:left}.sobre-img{margin:0 0 12px}}
+
+/* ── GALERIA (carrossel) ── */
+.gal-wrap{position:relative;margin-top:54px}
+.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
+.gal::-webkit-scrollbar{display:none}
+.gal-item{position:relative;overflow:hidden;border-radius:4px;cursor:pointer;flex:0 0 auto;scroll-snap-align:start;width:min(78vw,360px);aspect-ratio:4/4.6}
+.gal-item.wide{width:min(92vw,640px);aspect-ratio:2.6/1.6}
+.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
+.gal-item:hover img{transform:scale(1.06)}
+.gal-cap{position:absolute;inset:auto 0 0 0;padding:46px 22px 18px;background:linear-gradient(to top,rgba(7,6,10,.9),transparent);font-family:var(--cinzel);font-size:9px;letter-spacing:2.5px;color:var(--ouro-luz);text-transform:uppercase}
+.gal-arrs{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
+.gal-arr{width:40px;height:40px;border-radius:50%;border:1px solid var(--ouro-30);background:transparent;color:var(--ouro);font-size:16px;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center}
+.gal-arr:hover{background:var(--ouro-15);border-color:var(--ouro)}
+@media(hover:none){.gal-arrs{display:none}}
+
+/* ── DEPOIMENTOS ── */
+.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:54px}
+.dep{background:rgba(248,244,238,.025);border:1px solid rgba(248,244,238,.07);border-radius:6px;padding:38px 30px;position:relative;transition:border-color .4s}
+.dep:hover{border-color:var(--ouro-30)}
+.dep-q{font-family:var(--corm);font-size:90px;line-height:0;color:rgba(201,168,76,.35);position:absolute;top:48px;left:24px}
+.dep p{font-family:var(--corm);font-style:italic;font-size:19px;line-height:1.5;color:var(--marfim);margin:26px 0 22px;position:relative}
+.dep-who{font-family:var(--cinzel);font-size:9px;letter-spacing:2.5px;color:var(--ouro);text-transform:uppercase}
+.dep-who span{display:block;color:var(--marfim-30);margin-top:4px;letter-spacing:2px}
+
+/* ── CTA FINAL ── */
+.cta{background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.12),transparent 55%),var(--vinho);text-align:center;padding:clamp(80px,12vw,150px) 20px;border-top:1px solid var(--ouro-15)}
+.cta h2{font-family:var(--corm);font-weight:300;font-size:clamp(38px,6vw,72px);line-height:1.08;color:var(--marfim);margin-bottom:14px}
+.cta h2 em{font-style:italic;color:var(--ouro-luz)}
+.cta p{font-family:var(--cinzel);font-size:10px;letter-spacing:3px;color:rgba(201,168,76,.6);text-transform:uppercase;margin-bottom:40px}
+
+/* ── FOOTER ── */
+footer{border-top:1px solid var(--ouro-15);padding:60px clamp(20px,5vw,72px) 30px;max-width:1340px;margin:0 auto}
+.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:50px}
+.ft-logo{font-family:var(--cinzel);font-size:13px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px}
+.ft-slogan{font-family:var(--corm);font-style:italic;font-size:18px;color:var(--marfim-55);line-height:1.5;max-width:300px}
+.ft-h{font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--marfim-30);text-transform:uppercase;margin-bottom:16px}
+.ft-item{font-size:13px;color:var(--marfim-55);line-height:2;display:block;text-decoration:none;transition:color .3s}
+a.ft-item:hover{color:var(--ouro-luz)}
+.ft-bottom{border-top:1px solid rgba(248,244,238,.07);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--marfim-30);letter-spacing:.5px}
+
+/* ── LOGIN MODAL ── */
+.molov{position:fixed;inset:0;z-index:300;background:rgba(7,6,10,.8);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:18px}
+.molov.show{display:flex}
+.mol{background:#0D0B13;border:1px solid var(--ouro-30);border-radius:18px;width:100%;max-width:420px;padding:36px 32px;animation:molIn .4s cubic-bezier(.16,1,.3,1);max-height:92vh;overflow-y:auto}
+@keyframes molIn{from{opacity:0;transform:scale(.96) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
+.mol-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
+.mol-title{font-family:var(--corm);font-style:italic;font-size:30px;font-weight:400;color:var(--marfim)}
+.mol-x{width:30px;height:30px;border-radius:50%;border:1px solid rgba(248,244,238,.12);background:none;color:var(--marfim-55);cursor:pointer;font-size:13px;transition:all .3s}
+.mol-x:hover{border-color:var(--ouro);color:var(--ouro)}
+.mol-sub{font-family:var(--cinzel);font-size:9px;letter-spacing:2.5px;color:rgba(201,168,76,.6);text-transform:uppercase;margin-bottom:24px}
+.fld-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+.fld-hint{display:block;font-family:var(--dm);font-size:10px;color:var(--marfim-30);margin-top:5px;letter-spacing:.3px;text-transform:none}
+.fld{margin-bottom:14px}
+.fld label{display:block;font-family:var(--cinzel);font-size:8px;letter-spacing:2px;color:rgba(201,168,76,.65);text-transform:uppercase;margin-bottom:7px}
+.fld input{width:100%;background:rgba(248,244,238,.04);border:1px solid rgba(248,244,238,.1);border-radius:10px;padding:13px 16px;font-family:var(--dm);font-size:14px;color:var(--marfim);outline:none;transition:all .3s}
+.fld input:focus{border-color:var(--ouro);background:var(--ouro-15)}
+.fld input::placeholder{color:rgba(248,244,238,.25)}
+.mol-note{font-size:12px;color:var(--marfim-55);line-height:1.6;margin-top:14px;text-align:center}
+.mol-or{display:flex;align-items:center;gap:14px;margin:14px 0}
+.mol-or::before,.mol-or::after{content:'';flex:1;height:1px;background:rgba(248,244,238,.1)}
+.mol-or span{font-family:var(--cinzel);font-size:9px;letter-spacing:2px;color:var(--marfim-30);text-transform:uppercase}
+.mol-wa{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:transparent;border:1px solid rgba(107,168,107,.4);color:#7DB87D;border-radius:40px;padding:14px;font-family:var(--cinzel);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none}
+.mol-wa:hover{background:rgba(107,168,107,.12);border-color:#7DB87D}
+.mol-note em{color:var(--ouro-luz);font-style:italic;font-family:var(--corm)}
+.done-crown{font-size:54px;margin-bottom:14px;animation:popcrown .5s cubic-bezier(.34,1.56,.64,1)}
+@keyframes popcrown{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
+.fld input[type="date"]::-webkit-calendar-picker-indicator,.fld input[type="time"]::-webkit-calendar-picker-indicator{filter:invert(.7) sepia(1) saturate(3) hue-rotate(10deg)}
+.mol-btn{width:100%;background:linear-gradient(135deg,var(--ouro),var(--ouro-luz));color:#000;border:none;border-radius:40px;padding:15px;font-family:var(--cinzel);font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:all .35s cubic-bezier(.34,1.56,.64,1);margin-top:6px}
+.mol-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px var(--ouro-30)}
+.mol-err{display:none;background:rgba(180,60,60,.15);border:1px solid rgba(180,60,60,.3);color:#E08080;font-size:12px;padding:10px 14px;border-radius:8px;margin-bottom:14px}
+.mol-err.show{display:block}
+
+/* ── TOAST ── */
+.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(12px);background:#0D0B13;border:1px solid var(--ouro-30);color:var(--ouro);font-family:var(--cinzel);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:13px 26px;border-radius:40px;z-index:999;opacity:0;pointer-events:none;transition:all .4s cubic-bezier(.34,1.56,.64,1)}
+.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+
+/* ── RESPONSIVE ── */
+@media(max-width:1100px){
+  .hero{grid-template-columns:1fr;padding-top:110px;text-align:left}
+  .hero-right{order:-1;margin-bottom:8px}
+  .arch{width:min(70%,320px)}
+}
+@media(max-width:768px){
+  .svc-row{grid-template-columns:56px 1fr auto;gap:14px;padding:20px 8px}
+  .svc-num{display:none}
+  .svc-thumb{display:block;width:56px;height:56px;border-radius:50% 50% 6px 6px;overflow:hidden;border:1px solid var(--ouro-30);flex-shrink:0}
+  .svc-thumb img{width:100%;height:100%;object-fit:cover}
+  .svc-dur,.svc-arrow{display:none}
+  .stats{grid-template-columns:1fr}
+  .ft-grid{grid-template-columns:1fr;gap:30px}
+  .float-img{display:none}
+  .hero h1{font-size:clamp(44px,12vw,72px)}
+  .fld-row{grid-template-columns:1fr}
+  .topbar{padding:0 18px}
+  .tb-ig{display:none}
+  .tb-cta{padding:10px 18px;font-size:9px}
+  .tb-logo{font-size:10px}
+}
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
+  .preloader{display:none}
+  .cursor{display:none}
+  .mq-track{animation:none}
+}
+</style>
+</head>
+<body>
+<div class="preloader" id="pre"><div class="pre-mono">M<em>·</em>O</div><div class="pre-line"></div></div>
+<div class="cursor" id="cursor"></div>
+<div class="toast" id="toast"></div>
+<div class="float-img" id="floatImg"><img src="" alt=""></div>
+
+<!-- TOPBAR -->
+<header class="topbar" id="topbar">
+  <div class="tb-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">Espaço Maiury Oliveira<span>Campo Limpo · Feira de Santana</span></div>
+  <nav class="tb-nav" aria-label="Navegação principal">
+    <a class="tb-ig" href="https://instagram.com/espaco_maiuryoliveira" target="_blank" rel="noopener" aria-label="Instagram do salão">Instagram</a>
+    <a class="tb-cta" onclick="openLogin()">Agendar Horário</a>
+  </nav>
+</header>
+
+<main>
+<!-- HERO -->
+<section class="hero" aria-label="Apresentação">
+  <div>
+    <div class="hero-tag">✦ Campo Limpo · Feira de Santana — BA</div>
+    <h1>
+      <span class="l"><span>Onde toda mulher</span></span>
+      <span class="l"><span>descobre que já</span></span>
+      <span class="l"><span class="reina">nasceu rainha.</span></span>
+    </h1>
+    <div class="hero-meta"><span>Terça a Sábado</span><span class="dot"></span><span>08h às 20h</span><span class="dot"></span><span>@espaco_maiuryoliveira</span></div>
+    <div class="hero-cta">
+      <a class="btn btn-ouro" onclick="openLogin()">Agendar Agora</a>
+      <a class="btn btn-ghost" href="#servicos">Ver Serviços</a>
+    </div>
+  </div>
+  <div class="hero-right">
+    <div class="arch">
+      <div class="arch-img"><img id="heroImg" src="https://picsum.photos/seed/maiury-hero/900/1200" alt="Mulher com cabelo impecável em salão de luxo"></div>
+      <div class="arch-frame"></div>
+      <div class="arch-caption">Desde sempre, realeza</div>
+    </div>
+  </div>
+  <div class="hero-scroll">Descubra ↓</div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee" aria-hidden="true">
+  <div class="mq-track">
+    <span>Rainha <i>✦</i> Campo Limpo <i>✦</i> Realeza <i>✦</i> Feira de Santana <i>✦</i> Beleza <i>✦</i> Coroação <i>✦</i></span>
+    <span>Rainha <i>✦</i> Campo Limpo <i>✦</i> Realeza <i>✦</i> Feira de Santana <i>✦</i> Beleza <i>✦</i> Coroação <i>✦</i></span>
+  </div>
+</div>
+
+<!-- SERVIÇOS -->
+<section class="sec" id="servicos" aria-label="Serviços">
+  <div class="rv">
+    <div class="sec-eyebrow">Nº 01 — O Cardápio</div>
+    <h2 class="sec-title">Serviços <em>&amp; Rituais</em></h2>
+    <p class="sec-sub">Cada serviço é um ritual. Preço claro, hora marcada, resultado de revista.</p>
+  </div>
+  <div class="svc-list rv" id="svcList"></div>
+</section>
+
+<!-- MANIFESTO + NÚMEROS -->
+<section class="sec manifesto" aria-label="Manifesto">
+  <blockquote class="rv">"Luxo não é distância. <em>É cuidado em cada detalhe</em> — e agora ele mora no Campo Limpo."</blockquote>
+  <div class="stats rv">
+    <div class="stat"><div class="stat-n" data-count="500" data-prefix="+">0</div><div class="stat-l">Clientes atendidas</div></div>
+    <div class="stat"><div class="stat-n" data-count="8">0</div><div class="stat-l">Serviços exclusivos</div></div>
+    <div class="stat"><div class="stat-n" data-count="6">0</div><div class="stat-l">Dias por semana</div></div>
+  </div>
+</section>
+
+<!-- SOBRE A MAIURY -->
+<section class="sec sobre" aria-label="Sobre a Maiury">
+  <div class="sobre-grid">
+    <div class="sobre-img rv">
+      <div class="arch-img"><img loading="lazy" src="https://picsum.photos/seed/maiury-retrato/800/1000" alt="Maiury Oliveira, proprietária do salão"></div>
+      <div class="arch-frame"></div>
+    </div>
+    <div class="sobre-txt rv">
+      <div class="sec-eyebrow">Quem te recebe</div>
+      <h2 class="sec-title">A mão por trás de <em>cada detalhe</em></h2>
+      <p>No Espaço Maiury Oliveira, quem cuida de você é a própria Maiury — do primeiro olhar ao último retoque. Aqui não é uma esteira de atendimentos: é tempo, atenção e técnica dedicados a uma cliente de cada vez.</p>
+      <p>É por isso que cada horário é reservado com cuidado. Quando você agenda, está garantindo um momento que é só seu — no único endereço do Campo Limpo pensado para tratar você como realeza.</p>
+      <a class="btn btn-ghost" onclick="openLogin()">Quero meu horário</a>
+    </div>
+  </div>
+</section>
+
+<!-- GALERIA -->
+<section class="sec" aria-label="Galeria">
+  <div class="rv">
+    <div class="sec-eyebrow">Nº 02 — O Portfólio</div>
+    <h2 class="sec-title">Transformações <em>reais</em></h2>
+  </div>
+  <div class="gal-wrap">
+    <div class="gal rv" id="galTrack">
+      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal1/700/900'" alt="Cabelo finalizado em salão"><div class="gal-cap">Progressiva Premium</div></div>
+      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1604902396830-aa0b3481d3ca?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal2/700/900'" alt="Nail art dourada"><div class="gal-cap">Manicure Real</div></div>
+      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal3/700/900'" alt="Maquiagem profissional"><div class="gal-cap">Make Realeza</div></div>
+      <div class="gal-item wide"><img loading="lazy" src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1400&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal4/1400/540'" alt="Ambiente do salão"><div class="gal-cap">O Espaço · Antes &amp; Depois</div></div>
+      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal5/700/900'" alt="Pedicure finalizada"><div class="gal-cap">Pedicure Nobre</div></div>
+    </div>
+    <div class="gal-arrs">
+      <button class="gal-arr" onclick="galScroll(-1)" aria-label="Anterior">←</button>
+      <button class="gal-arr" onclick="galScroll(1)" aria-label="Próximo">→</button>
+    </div>
+  </div>
+</section>
+
+<!-- DEPOIMENTOS -->
+<section class="sec" aria-label="Depoimentos">
+  <div class="rv">
+    <div class="sec-eyebrow">Nº 03 — As Vozes</div>
+    <h2 class="sec-title">Quem já foi <em>coroada</em></h2>
+  </div>
+  <div class="dep-grid rv">
+    <div class="dep"><div class="dep-q">"</div><p>Nunca pensei que encontraria algo assim no Campo Limpo. Saí me sentindo uma rainha de verdade.</p><div class="dep-who">Fernanda Rodrigues<span>Cliente do Espaço</span></div></div>
+    <div class="dep"><div class="dep-q">"</div><p>A Maiury tem um dom. Meu cabelo nunca ficou tão bonito. Vale cada centavo.</p><div class="dep-who">Bianca Souza<span>Cliente do Espaço</span></div></div>
+    <div class="dep"><div class="dep-q">"</div><p>O ambiente é lindo e o atendimento da Maiury é impecável. É diferente de tudo que tem na região.</p><div class="dep-who">Carla Andrade<span>Cliente do Espaço</span></div></div>
+  </div>
+</section>
+</main>
+
+<!-- CTA FINAL -->
+<section class="cta" aria-label="Agendar">
+  <h2 class="rv">Sua coroação tem <em>hora marcada.</em></h2>
+  <p class="rv">Espaço Maiury Oliveira · Campo Limpo · Feira de Santana</p>
+  <a class="btn btn-ouro rv" onclick="openLogin()">Agendar Meu Horário</a>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="ft-grid">
+    <div>
+      <div class="ft-logo">Espaço Maiury Oliveira</div>
+      <p class="ft-slogan">"Onde toda mulher descobre que já nasceu rainha."</p>
+    </div>
+    <div>
+      <div class="ft-h">Atendimento</div>
+      <span class="ft-item">Terça a Sábado</span>
+      <span class="ft-item">08h às 20h</span>
+      <span class="ft-item">Campo Limpo, Feira de Santana — BA</span>
+    </div>
+    <div>
+      <div class="ft-h">Conecte-se</div>
+      <a class="ft-item" href="https://instagram.com/espaco_maiuryoliveira" target="_blank" rel="noopener" aria-label="Instagram do salão">@espaco_maiuryoliveira</a>
+      <a class="ft-item" href="#servicos">Serviços</a>
+      <a class="ft-item" onclick="openLogin()" style="cursor:pointer">Minha conta</a>
+    </div>
+  </div>
+  <div class="ft-bottom">
+    <span>© 2025 Espaço Maiury Oliveira</span>
+    <span>Feito com amor pela sua beleza ✦</span>
+  </div>
+</footer>
+
+<!-- MODAL: SOLICITAR HORÁRIO -->
+<div class="molov" id="loginModal" role="dialog" aria-modal="true" aria-label="Solicitar horário">
+  <div class="mol">
+    <div class="mol-head"><div class="mol-title">Solicitar Horário</div><button class="mol-x" onclick="closeLogin()" aria-label="Fechar">✕</button></div>
+    <div class="mol-sub">Responderemos em breve pelo WhatsApp</div>
+
+    <div id="reqForm">
+      <div class="mol-err" id="molErr">Preencha nome, telefone e serviço.</div>
+      <div class="fld"><label>Seu nome</label><input type="text" id="rNome" placeholder="Maria Fernanda" autocomplete="name"></div>
+      <div class="fld"><label>Telefone (WhatsApp)</label><input type="tel" id="rTel" placeholder="(75) 99999-9999" maxlength="15" autocomplete="tel"></div>
+      <div class="fld">
+        <label>Serviço</label>
+        <select id="rServico">
+          <option value="">Selecione...</option>
+        </select>
+      </div>
+      <div class="fld-row">
+        <div class="fld"><label>Data preferida</label><input type="date" id="rData"><small class="fld-hint">Atendemos de terça a sábado</small></div>
+        <div class="fld"><label>Horário preferido</label><input type="time" id="rHora" min="08:00" max="20:00" step="1800" value="09:00"><small class="fld-hint">Entre 08h e 20h</small></div>
+      </div>
+      <div class="fld"><label>Observações (opcional)</label><input type="text" id="rObs" placeholder="Alguma preferência ou detalhe?"></div>
+      <button class="mol-btn" onclick="submitRequest()">Solicitar Horário</button>
+      <div class="mol-or"><span>ou</span></div>
+      <a class="mol-wa" onclick="abrirWhatsApp()">
+        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
+        Prefiro falar no WhatsApp
+      </a>
+      <p class="mol-note">Seu pedido fica <em>pendente</em> até a Maiury confirmar pelo WhatsApp. Atendimento de terça a sábado, 08h às 20h.</p>
+    </div>
+
+    <div id="reqDone" style="display:none;text-align:center;padding:10px 0 4px">
+      <div class="done-crown">👑</div>
+      <div class="mol-title" style="font-size:26px;margin-bottom:6px">Pedido enviado!</div>
+      <p class="mol-note" style="margin:0 0 22px">A Maiury vai confirmar seu horário pelo WhatsApp em breve. Até logo, futura rainha ✦</p>
+      <button class="mol-btn" onclick="closeLogin()">Fechar</button>
+    </div>
+  </div>
+</div>
+
+
+<script>
+/* ════════════════════════════════════════
+   ESPAÇO MAIURY OLIVEIRA — Landing JS
+   Realeza Negra Editorial · Vanilla JS
+════════════════════════════════════════ */
+
+// ⚠️ TROCAR pelo WhatsApp real da Maiury (formato: 55 + DDD + número)
+const WHATSAPP_MAIURY = '5575982727760';
+
+// ── DADOS DOS SERVIÇOS ──────────────────
+const SERVICOS = [
+  {n:'01',nome:'Progressiva Premium',desc:'Alisamento sem formol, brilho e maciez reais',dur:'3h',preco:280,img:'https://picsum.photos/seed/maiury-svc1/700/900'},
+  {n:'02',nome:'Manicure Real',desc:'Gel de longa duração com nail art exclusivo',dur:'1h',preco:90,img:'https://picsum.photos/seed/maiury-svc2/700/900'},
+  {n:'03',nome:'Extensão de Cílios',desc:'Fio a fio para efeito natural irresistível',dur:'2h30',preco:200,img:'https://picsum.photos/seed/maiury-svc3/700/900'},
+  {n:'04',nome:'Design de Sobrancelha',desc:'Modelagem + henna, sobrancelhas definidas',dur:'45min',preco:75,img:'https://picsum.photos/seed/maiury-svc4/700/900'},
+  {n:'05',nome:'Hidratação Facial',desc:'Tratamento profundo com ativos premium',dur:'1h30',preco:140,img:'https://picsum.photos/seed/maiury-svc5/700/900'},
+  {n:'06',nome:'Make Realeza',desc:'Maquiagem artística para eventos e noivas',dur:'1h30',preco:180,img:'https://picsum.photos/seed/maiury-svc6/700/900'},
+  {n:'07',nome:'Hidratação Capilar',desc:'Nutrição profunda com proteínas e brilho',dur:'1h',preco:100,img:'https://picsum.photos/seed/maiury-svc7/700/900'},
+  {n:'08',nome:'Pedicure Nobre',desc:'Cuidado completo com esmaltação e hidratação',dur:'1h',preco:70,img:'https://picsum.photos/seed/maiury-svc8/700/900'},
+];
+
+// ── RENDER SERVIÇOS (índice editorial) ──
+function renderServicos(){
+  const list = document.getElementById('svcList');
+  list.innerHTML = SERVICOS.map(s => `
+    <div class="svc-row" data-img="${s.img}" onclick="abrirComServico('${s.nome.replace(/'/g,"\\'")}')">
+      <div class="svc-num">Nº ${s.n}</div>
+      <div class="svc-thumb"><img loading="lazy" src="${s.img}" alt="${s.nome}"></div>
+      <div class="svc-name">${s.nome}<small>${s.desc}</small></div>
+      <div class="svc-dur">${s.dur}</div>
+      <div class="svc-price">R$ ${s.preco}</div>
+      <div class="svc-arrow">→</div>
+    </div>`).join('');
+
+  // popular select do formulário
+  const sel = document.getElementById('rServico');
+  sel.innerHTML = '<option value="">Selecione...</option>' +
+    SERVICOS.map(s=>`<option value="${s.nome}">${s.nome} — R$ ${s.preco} (${s.dur})</option>`).join('');
+}
+
+// ── FOTO FLUTUANTE (hover desktop) ──────
+function initFloatImg(){
+  if(window.matchMedia('(hover: none)').matches) return;
+  const float = document.getElementById('floatImg');
+  const img = float.querySelector('img');
+  document.querySelectorAll('.svc-row').forEach(row=>{
+    row.addEventListener('mouseenter',()=>{
+      img.src = row.dataset.img;
+      float.classList.add('on');
+    });
+    row.addEventListener('mousemove',e=>{
+      float.style.left = (e.clientX + 30) + 'px';
+      float.style.top  = (e.clientY - 170) + 'px';
+    });
+    row.addEventListener('mouseleave',()=> float.classList.remove('on'));
+  });
+}
+
+// ── CURSOR-JOIA ──────────────────────────
+function initCursor(){
+  if(window.matchMedia('(hover: none)').matches) return;
+  const cursor = document.getElementById('cursor');
+  window.addEventListener('mousemove', e=>{
+    cursor.style.left = e.clientX + 'px';
+    cursor.style.top  = e.clientY + 'px';
+  });
+  document.querySelectorAll('a,button,.svc-row,.gal-item').forEach(el=>{
+    el.addEventListener('mouseenter',()=>cursor.classList.add('grow'));
+    el.addEventListener('mouseleave',()=>cursor.classList.remove('grow'));
+  });
+}
+
+// ── PARALLAX SUTIL NO HERO ───────────────
+function initParallax(){
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  const img = document.getElementById('heroImg');
+  window.addEventListener('scroll',()=>{
+    const y = window.scrollY;
+    if(y < window.innerHeight) img.style.transform = `translateY(${y*0.12}px)`;
+  });
+}
+
+// ── CARROSSEL GALERIA ─────────────────────
+function galScroll(dir){
+  const track = document.getElementById('galTrack');
+  const card = track.querySelector('.gal-item');
+  const step = card.getBoundingClientRect().width + 14; // largura + gap
+  track.scrollBy({left: dir*step, behavior:'smooth'});
+}
+
+// ── REVEAL ON SCROLL ──────────────────────
+function initReveal(){
+  const els = document.querySelectorAll('.rv');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
+  },{threshold:.01,rootMargin:'0px 0px -10% 0px'});
+  els.forEach(el=>io.observe(el));
+}
+
+// ── COUNT-UP ──────────────────────────────
+function initCountUp(){
+  const stats = document.querySelectorAll('.stat-n');
+  const io = new IntersectionObserver(entries=>{
+    entries.forEach(e=>{
+      if(!e.isIntersecting) return;
+      const el = e.target;
+      const target = parseInt(el.dataset.count,10);
+      const prefix = el.dataset.prefix || '';
+      const dur = 1400, start = performance.now();
+      function tick(now){
+        const p = Math.min((now-start)/dur,1);
+        const eased = 1 - Math.pow(1-p,3);
+        el.textContent = prefix + Math.round(eased*target);
+        if(p<1) requestAnimationFrame(tick);
+      }
+      requestAnimationFrame(tick);
+      io.unobserve(el);
+    });
+  },{threshold:.5});
+  stats.forEach(el=>io.observe(el));
+}
+
+// ── TOPBAR SCROLL STATE ───────────────────
+function initTopbar(){
+  const tb = document.getElementById('topbar');
+  window.addEventListener('scroll',()=> tb.classList.toggle('scrolled', window.scrollY>60), {passive:true});
+}
+
+// ── MODAL: SOLICITAR HORÁRIO ──────────────
+function openLogin(){
+  document.getElementById('loginModal').classList.add('show');
+  document.getElementById('reqForm').style.display='block';
+  document.getElementById('reqDone').style.display='none';
+  document.getElementById('molErr').classList.remove('show');
+}
+function closeLogin(){ document.getElementById('loginModal').classList.remove('show'); }
+function abrirComServico(nome){
+  openLogin();
+  document.getElementById('rServico').value = nome;
+}
+
+function rawPhone(v){ return (v||'').replace(/\D/g,''); }
+function sanitize(v){ return (v||'').replace(/[<>"'&]/g,'').trim(); }
+function fmtDataBR(ds){ if(!ds) return ''; const [y,m,d]=ds.split('-'); return `${d}/${m}/${y}`; }
+document.addEventListener('input', e=>{
+  if(e.target.id==='rTel'){
+    let d = e.target.value.replace(/\D/g,'').slice(0,11);
+    e.target.value = !d?'': d.length<=2?'('+d : d.length<=7?'('+d.slice(0,2)+') '+d.slice(2) : '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7);
+  }
+});
+
+function montarMensagem(){
+  const nome = sanitize(document.getElementById('rNome').value);
+  const tel  = document.getElementById('rTel').value;
+  const svc  = document.getElementById('rServico').value;
+  const data = document.getElementById('rData').value;
+  const hora = document.getElementById('rHora').value;
+  const obs  = sanitize(document.getElementById('rObs').value);
+  let m = `Olá, Maiury! Gostaria de solicitar um horário no Espaço Maiury Oliveira ✨\n\n`;
+  m += `*Nome:* ${nome||'—'}\n`;
+  if(svc)  m += `*Serviço:* ${svc}\n`;
+  if(data) m += `*Data preferida:* ${fmtDataBR(data)}\n`;
+  if(hora) m += `*Horário preferido:* ${hora}\n`;
+  if(obs)  m += `*Observações:* ${obs}\n`;
+  return encodeURIComponent(m);
+}
+
+function abrirWhatsApp(){
+  const nome = sanitize(document.getElementById('rNome').value);
+  const svc  = document.getElementById('rServico').value;
+  if(!nome || !svc){ document.getElementById('molErr').classList.add('show'); return; }
+  window.open(`https://wa.me/${WHATSAPP_MAIURY}?text=${montarMensagem()}`, '_blank');
+}
+
+function submitRequest(){
+  const nome = sanitize(document.getElementById('rNome').value);
+  const tel  = rawPhone(document.getElementById('rTel').value);
+  const svc  = document.getElementById('rServico').value;
+  const err  = document.getElementById('molErr');
+
+  if(!nome || tel.length<10 || !svc){ err.classList.add('show'); return; }
+  err.classList.remove('show');
+
+  const pedido = {
+    id: Date.now(),
+    nome, telefone: tel,
+    servico: svc,
+    data: document.getElementById('rData').value,
+    hora: document.getElementById('rHora').value,
+    obs: sanitize(document.getElementById('rObs').value),
+    status: 'pendente',
+    criadoEm: new Date().toISOString()
+  };
+  const pedidos = JSON.parse(localStorage.getItem('emo_pedidos')||'[]');
+  pedidos.push(pedido);
+  localStorage.setItem('emo_pedidos', JSON.stringify(pedidos));
+
+  // Abre o WhatsApp da Maiury com o pedido pronto
+  window.open(`https://wa.me/${WHATSAPP_MAIURY}?text=${montarMensagem()}`, '_blank');
+
+  document.getElementById('reqForm').style.display='none';
+  document.getElementById('reqDone').style.display='block';
+}
+
+function showToast(msg){
+  const t = document.getElementById('toast');
+  t.textContent = msg; t.classList.add('show');
+  clearTimeout(window._tt);
+  window._tt = setTimeout(()=>t.classList.remove('show'), 2800);
+}
+
+// ── PRELOADER ──────────────────────────────
+function initPreloader(){
+  const pre = document.getElementById('pre');
+  const done = ()=> pre.classList.add('done');
+  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ done(); return; }
+  setTimeout(done, 1400);
+}
+
+// ── BOOT ───────────────────────────────────
+window.addEventListener('DOMContentLoaded', ()=>{
+  renderServicos();
+  initPreloader();
+  initCursor();
+  initTopbar();
+  initReveal();
+  initCountUp();
+  initFloatImg();
+  initParallax();
+
+  // fecha modal clicando fora
+  document.getElementById('loginModal').addEventListener('click', e=>{
+    if(e.target.id==='loginModal') closeLogin();
+  });
+  document.addEventListener('keydown', e=>{
+    if(e.key==='Escape') closeLogin();
+  });
+
+  // data mínima = hoje, e bloqueia domingo/segunda no input
+  const rData = document.getElementById('rData');
+  const hoje = new Date();
+  rData.min = hoje.toISOString().slice(0,10);
+  rData.addEventListener('input', ()=>{
+    const d = new Date(rData.value+'T12:00:00');
+    const dia = d.getDay(); // 0=dom,1=seg
+    if(dia===0 || dia===1){
+      showToast('Atendemos de terça a sábado — escolha outra data');
+      rData.value='';
+    }
+  });
+});
+</script>
+</body>
+</html>
