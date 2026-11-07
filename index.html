@@ -1,698 +1,512 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>Espaço Maiury Oliveira — Onde toda mulher descobre que já nasceu rainha</title>
-<meta name="description" content="O primeiro salão de beleza premium do Campo Limpo, Feira de Santana. Terça a Sábado, 08h às 20h.">
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500&family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400;1,500&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500&display=swap" rel="stylesheet">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Maiury Oliveira | Terapia Capilar e Alisamentos em Feira de Santana</title>
+<meta name="description" content="Studio de beleza em Feira de Santana especializado em alisamentos, terapia capilar, cortes e home care. Agende sua experiência pelo WhatsApp.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Studio Maiury Oliveira · Studio de beleza em Feira de Santana">
+<meta property="og:description" content="Alisamentos, terapia capilar e cuidado personalizado. Agende sua experiência pelo WhatsApp.">
+<meta property="og:image" content="img/maiury-real.webp">
+<meta name="theme-color" content="#FAF7F2">
+<link rel="preload" as="font" type="font/woff2" href="fonts/playfair-display-latin-400-normal.woff2" crossorigin>
+<link rel="preload" as="font" type="font/woff2" href="fonts/jost-latin-400-normal.woff2" crossorigin>
+<link rel="preload" as="image" href="img/maiury-real.webp">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"BeautySalon","name":"Studio Maiury Oliveira","description":"Studio de beleza especializado em alisamentos, terapia capilar, cortes e home care.","telephone":"+55-75-98232-2378","image":"img/maiury-real.webp","address":{"@type":"PostalAddress","streetAddress":"Rua Monsenhor Moisés Gonçalves do Couto, 802 - Campo Limpo","postalCode":"44033-403","addressLocality":"Feira de Santana","addressRegion":"BA","addressCountry":"BR"},"geo":{"@type":"GeoCoordinates","latitude":-12.2152,"longitude":-38.969226},"sameAs":["https://www.instagram.com/studiomaiuryoliveira/"]}
+</script>
 <style>
-/* ═══════════════════════════════════════════════════
-   ESPAÇO MAIURY OLIVEIRA — Realeza Negra Editorial
-   Noir #07060A · Vinho #3D0C24 · Ouro #C9A84C · Marfim #F8F4EE
-═══════════════════════════════════════════════════ */
-*,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
+@font-face{font-family:"Playfair";font-weight:400;font-style:normal;font-display:swap;src:url(fonts/playfair-display-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Playfair";font-weight:500;font-style:normal;font-display:swap;src:url(fonts/playfair-display-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Playfair";font-weight:400;font-style:italic;font-display:swap;src:url(fonts/playfair-display-latin-400-italic.woff2) format("woff2")}
+@font-face{font-family:"Playfair";font-weight:500;font-style:italic;font-display:swap;src:url(fonts/playfair-display-latin-500-italic.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:300;font-display:swap;src:url(fonts/jost-latin-300-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:400;font-display:swap;src:url(fonts/jost-latin-400-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:500;font-display:swap;src:url(fonts/jost-latin-500-normal.woff2) format("woff2")}
+@font-face{font-family:"Jost";font-weight:600;font-display:swap;src:url(fonts/jost-latin-600-normal.woff2) format("woff2")}
+@font-face{font-family:"Pinyon";font-weight:400;font-display:swap;src:url(fonts/pinyon-script-latin-400-normal.woff2) format("woff2")}
+
 :root{
-  --noir:#07060A;
-  --vinho:#3D0C24;
-  --ouro:#C9A84C;
-  --ouro-luz:#E8C96B;
-  --marfim:#F8F4EE;
-  --marfim-55:rgba(248,244,238,.55);
-  --marfim-30:rgba(248,244,238,.3);
-  --ouro-15:rgba(201,168,76,.15);
-  --ouro-30:rgba(201,168,76,.3);
-  --cinzel:'Cinzel',serif;
-  --corm:'Cormorant Garamond',serif;
-  --dm:'DM Sans',sans-serif;
+  --off:#FAF7F2; --champ:#EFE4D6; --nude:#E6D3C2; --brown:#3B2A21; --brown2:#2A1E18; --ink:#1F1712;
+  --text:#4A3B31; --line:#DCCBB9; --gold:#B8925A; --gold-l:#D9BD8C; --accent:#7A5A26;
+  --serif:"Playfair",Georgia,serif; --sans:"Jost",system-ui,sans-serif; --script:"Pinyon",cursive;
+  --ease:cubic-bezier(.22,1,.36,1); --r:20px;
 }
+*{box-sizing:border-box;margin:0;padding:0}
 html{scroll-behavior:smooth}
-body{background:var(--noir);color:var(--marfim);font-family:var(--dm);font-weight:300;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+html,body{overflow-x:clip}
+body{font-family:var(--sans);font-size:17px;line-height:1.65;color:var(--text);background:var(--off);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.wrap{width:min(1200px,100% - 40px);margin-inline:auto}
+section{padding:110px 0;position:relative}
+@media(max-width:860px){section{padding:72px 0}}
+.tag{display:inline-flex;align-items:center;gap:14px;font-size:12px;letter-spacing:.28em;text-transform:uppercase;font-weight:500;color:var(--accent)}
+.tag::before{content:"";width:34px;height:1px;background:var(--gold)}
+h1,h2,h3{font-family:var(--serif);font-weight:400;color:var(--ink);letter-spacing:-.01em}
+h1{font-size:clamp(40px,5.2vw,74px);line-height:1.06}
+h2{font-size:clamp(34px,4.4vw,58px);line-height:1.1}
+h3{font-size:25px;line-height:1.2}
+h1 em,h2 em{font-style:italic;color:var(--accent)}
+.sub{font-size:18.5px;color:var(--text);max-width:520px;font-weight:400}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:12px;min-height:56px;padding:0 32px;border-radius:999px;background:var(--brown);color:#fff;text-decoration:none;font-weight:500;font-size:13px;letter-spacing:.18em;text-transform:uppercase;border:1px solid var(--brown);transition:all .3s var(--ease);cursor:pointer}
+.btn:hover{background:var(--accent);border-color:var(--accent);transform:translateY(-2px)}
+.btn svg{width:18px;height:18px}
+.btn.ghost{background:transparent;color:var(--brown)}
+.btn.ghost:hover{background:var(--brown);color:#fff}
+.btn.light{background:#fff;color:var(--brown);border-color:#fff}
+.btn.light:hover{background:var(--gold-l);border-color:var(--gold-l);color:var(--ink)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--gold);outline-offset:4px}
+.ph{background:#FFF0C7;color:#6b4c00;padding:1px 6px;border-radius:4px;font-size:.92em}
 
-/* grain cinematográfico */
-body::after{content:'';position:fixed;inset:0;z-index:9990;pointer-events:none;opacity:.035;
-  background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 250 250' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+/* HEADER */
+header{position:fixed;inset:0 0 auto;z-index:60;padding:16px 0;transition:all .4s var(--ease)}
+header.scrolled{background:rgba(250,247,242,.9);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);box-shadow:0 1px 0 var(--line);padding:10px 0}
+header .wrap{display:flex;align-items:center;justify-content:space-between;gap:20px}
+.brand{display:flex;align-items:center;gap:12px;text-decoration:none;color:var(--ink)}
+.brand .mo{width:32px;color:var(--gold)}
+.brand b{display:block;font-family:var(--serif);font-weight:400;font-size:19px;line-height:1}
+.brand small{display:block;font-size:9.5px;letter-spacing:.3em;text-transform:uppercase;color:var(--text);margin-top:4px}
+.pillnav{display:flex;gap:2px;padding:5px;border-radius:99px;background:rgba(255,255,255,.7);border:1px solid var(--line);backdrop-filter:blur(10px)}
+.pillnav a{padding:8px 16px;border-radius:99px;font-size:14px;text-decoration:none;color:var(--ink);transition:background .25s}
+.pillnav a:hover{background:var(--champ)}
+header .btn{min-height:46px;padding:0 22px;font-size:12px}
+.burger{display:none;width:46px;height:46px;border-radius:50%;border:1px solid var(--line);background:#fff;cursor:pointer;align-items:center;justify-content:center;flex-direction:column;gap:5px}
+.burger i{display:block;width:18px;height:1.5px;background:var(--ink);transition:transform .3s}
+@media(max-width:980px){.pillnav{display:none}.burger{display:inline-flex}header .btn{display:none}}
+.mnav{position:fixed;inset:0;z-index:70;background:var(--brown2);color:#fff;display:flex;flex-direction:column;justify-content:center;padding:40px 32px;opacity:0;visibility:hidden;transition:all .45s var(--ease)}
+.mnav.open{opacity:1;visibility:visible}
+.mnav a.l{font-family:var(--serif);font-size:38px;text-decoration:none;line-height:1.5;color:#fff;opacity:0;transform:translateY(20px);transition:all .5s var(--ease)}
+.mnav.open a.l{opacity:1;transform:none}
+.mnav.open a.l:nth-child(2){transition-delay:.05s}.mnav.open a.l:nth-child(3){transition-delay:.1s}.mnav.open a.l:nth-child(4){transition-delay:.15s}.mnav.open a.l:nth-child(5){transition-delay:.2s}
+.mnav .btn{margin-top:34px;align-self:flex-start}
+.mnav .close{position:absolute;top:20px;right:20px;width:46px;height:46px;border-radius:50%;border:1px solid #5a4a3f;background:none;color:#fff;font-size:24px;cursor:pointer}
 
-/* ── PRELOADER ── */
-.preloader{position:fixed;inset:0;z-index:9999;background:var(--noir);display:flex;flex-direction:column;align-items:center;justify-content:center;gap:18px;transition:opacity .7s ease,visibility .7s}
-.preloader.done{opacity:0;visibility:hidden}
-.pre-mono{font-family:var(--corm);font-size:72px;font-weight:300;font-style:italic;color:var(--marfim);letter-spacing:6px}
-.pre-mono em{color:var(--ouro-luz);font-style:italic}
-.pre-line{width:160px;height:1px;background:rgba(201,168,76,.2);position:relative;overflow:hidden}
-.pre-line::after{content:'';position:absolute;inset:0;background:var(--ouro);transform:translateX(-100%);animation:sweep 1.1s cubic-bezier(.65,0,.35,1) forwards}
-@keyframes sweep{to{transform:translateX(0)}}
-
-/* ── CURSOR-JOIA ── */
-.cursor{position:fixed;top:0;left:0;width:12px;height:12px;border-radius:50%;background:var(--ouro);z-index:9995;pointer-events:none;transform:translate(-50%,-50%);transition:width .25s,height .25s,background .25s,border .25s;mix-blend-mode:difference}
-.cursor.grow{width:40px;height:40px;background:transparent;border:1px solid var(--ouro)}
-@media(hover:none){.cursor{display:none}}
-
-/* ── TOPBAR ── */
-.topbar{position:fixed;top:0;left:0;right:0;z-index:100;height:64px;display:flex;align-items:center;justify-content:space-between;padding:0 clamp(20px,4vw,56px);background:rgba(7,6,10,.92);backdrop-filter:blur(20px);border-bottom:1px solid transparent;transition:border-color .4s}
-.topbar.scrolled{border-bottom-color:var(--ouro-30)}
-.tb-logo{font-family:var(--cinzel);font-size:11px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase;line-height:1.4;cursor:pointer}
-.tb-logo span{display:block;font-size:8px;letter-spacing:4px;color:rgba(201,168,76,.5)}
-.tb-nav{display:flex;align-items:center;gap:24px}
-.tb-ig{font-family:var(--dm);font-size:12px;letter-spacing:1px;color:var(--marfim-55);text-decoration:none;text-transform:uppercase;transition:color .3s}
-.tb-ig:hover{color:var(--ouro-luz)}
-.tb-cta{font-family:var(--cinzel);font-size:10px;letter-spacing:2px;text-transform:uppercase;color:#000;background:linear-gradient(135deg,var(--ouro),var(--ouro-luz));padding:11px 22px;border-radius:30px;cursor:pointer;text-decoration:none;transition:all .35s cubic-bezier(.34,1.56,.64,1)}
-.tb-cta:hover{transform:translateY(-2px);box-shadow:0 10px 26px var(--ouro-30)}
-
-/* ── HERO ── */
-.hero{min-height:100vh;display:grid;grid-template-columns:1.15fr .85fr;align-items:center;gap:clamp(24px,4vw,64px);padding:120px clamp(20px,5vw,72px) 60px;position:relative}
-.hero-tag{display:inline-flex;align-items:center;gap:8px;font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase;border:1px solid var(--ouro-30);padding:7px 16px;border-radius:30px;margin-bottom:34px}
-.hero h1{font-family:var(--corm);font-weight:300;font-size:clamp(48px,7.4vw,116px);line-height:.98;letter-spacing:-1px;color:var(--marfim)}
-.hero h1 .l{display:block;overflow:hidden}
-.hero h1 .l span{display:block;transform:translateY(110%);animation:rise .9s cubic-bezier(.16,1,.3,1) forwards}
-.hero h1 .l:nth-child(2) span{animation-delay:.12s}
-.hero h1 .l:nth-child(3) span{animation-delay:.24s}
-.hero h1 .reina{font-style:italic;font-weight:500;color:var(--ouro-luz)}
-@keyframes rise{to{transform:translateY(0)}}
-.hero-meta{display:flex;align-items:center;gap:14px;margin:30px 0 38px;font-size:13px;color:var(--marfim-55);letter-spacing:.5px}
-.hero-meta .dot{width:3px;height:3px;border-radius:50%;background:var(--ouro)}
-.hero-cta{display:flex;gap:14px;flex-wrap:wrap}
-.btn{display:inline-flex;align-items:center;gap:8px;font-family:var(--cinzel);font-size:10px;letter-spacing:2.5px;text-transform:uppercase;padding:16px 34px;border-radius:40px;cursor:pointer;border:none;transition:all .35s cubic-bezier(.34,1.56,.64,1);text-decoration:none}
-.btn-ouro{background:linear-gradient(135deg,var(--ouro),var(--ouro-luz));color:#000;font-weight:500}
-.btn-ouro:hover{transform:translateY(-3px);box-shadow:0 16px 40px var(--ouro-30)}
-.btn-ghost{background:transparent;color:var(--ouro);border:1px solid var(--ouro-30)}
-.btn-ghost:hover{border-color:var(--ouro);background:var(--ouro-15)}
-.hero-right{position:relative;display:flex;justify-content:center}
-.arch{position:relative;width:min(100%,420px);aspect-ratio:3/4.1}
-.arch-img{width:100%;height:100%;border-radius:50% 50% 0 0/38% 38% 0 0;overflow:hidden;position:relative}
-.arch-img img{width:100%;height:110%;object-fit:cover;will-change:transform}
-.arch-frame{position:absolute;inset:-14px;border:1px solid var(--ouro-30);border-radius:50% 50% 0 0/38% 38% 0 0;pointer-events:none}
-.arch-caption{position:absolute;bottom:-14px;right:-8px;background:var(--vinho);border:1px solid var(--ouro-30);padding:14px 20px;font-family:var(--cinzel);font-size:9px;letter-spacing:2px;color:var(--ouro-luz);text-transform:uppercase}
-.hero-scroll{position:absolute;bottom:28px;left:clamp(20px,5vw,72px);font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--marfim-30);text-transform:uppercase;animation:pulse 2.4s ease-in-out infinite}
-@keyframes pulse{0%,100%{opacity:.3}50%{opacity:.9}}
-
-/* ── MARQUEE ── */
-.marquee{background:var(--vinho);border-top:1px solid var(--ouro-15);border-bottom:1px solid var(--ouro-15);overflow:hidden;padding:18px 0}
-.mq-track{display:flex;gap:48px;white-space:nowrap;animation:mq 30s linear infinite;width:max-content}
-.mq-track span{font-family:var(--corm);font-style:italic;font-size:26px;font-weight:300;color:var(--marfim);display:flex;align-items:center;gap:48px}
-.mq-track i{font-style:normal;color:var(--ouro);font-size:16px}
-@keyframes mq{to{transform:translateX(-50%)}}
-
-/* ── SECTION BASE ── */
-.sec{padding:clamp(70px,10vw,130px) clamp(20px,5vw,72px);max-width:1340px;margin:0 auto}
-.sec-eyebrow{font-family:var(--cinzel);font-size:10px;letter-spacing:4px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px;display:flex;align-items:center;gap:14px}
-.sec-eyebrow::after{content:'';width:54px;height:1px;background:var(--ouro-30)}
-.sec-title{font-family:var(--corm);font-weight:300;font-size:clamp(36px,5vw,58px);line-height:1.05;color:var(--marfim);margin-bottom:14px}
-.sec-title em{font-style:italic;color:var(--ouro-luz)}
-.sec-sub{font-size:14px;color:var(--marfim-55);max-width:480px;line-height:1.7}
-
-/* reveal on scroll */
-.rv{opacity:0;transform:translateY(34px);transition:opacity .8s cubic-bezier(.16,1,.3,1),transform .8s cubic-bezier(.16,1,.3,1)}
-.rv.in{opacity:1;transform:translateY(0)}
-
-/* ── SERVIÇOS — índice editorial ── */
-.svc-list{margin-top:54px;border-top:1px solid rgba(248,244,238,.08)}
-.svc-row{display:grid;grid-template-columns:70px 1fr auto auto 40px;align-items:center;gap:clamp(14px,3vw,40px);padding:30px 8px;border-bottom:1px solid rgba(248,244,238,.08);cursor:pointer;transition:padding .35s,background .35s}
-.svc-row:hover{background:rgba(201,168,76,.04);padding-left:22px}
-.svc-num{font-family:var(--cinzel);font-size:11px;letter-spacing:2px;color:var(--marfim-30);transition:color .3s}
-.svc-row:hover .svc-num{color:var(--ouro)}
-.svc-thumb{display:none}
-.svc-name{font-family:var(--corm);font-size:clamp(24px,3vw,36px);font-weight:400;color:var(--marfim);transition:color .3s;line-height:1.1}
-.svc-name small{display:block;font-family:var(--dm);font-size:12px;color:var(--marfim-55);font-weight:300;margin-top:4px;letter-spacing:.3px}
-.svc-row:hover .svc-name{color:var(--ouro-luz)}
-.svc-dur{font-family:var(--dm);font-size:12px;color:var(--marfim-55);letter-spacing:.5px;white-space:nowrap}
-.svc-price{font-family:var(--corm);font-style:italic;font-size:clamp(20px,2.4vw,28px);color:var(--ouro);white-space:nowrap}
-.svc-arrow{font-size:18px;color:var(--marfim-30);transition:transform .35s,color .3s}
-.svc-row:hover .svc-arrow{transform:translateX(6px);color:var(--ouro)}
-/* foto flutuante */
-.float-img{position:fixed;width:280px;height:340px;border-radius:50% 50% 0 0/30% 30% 0 0;overflow:hidden;pointer-events:none;z-index:80;opacity:0;transform:scale(.92);transition:opacity .35s,transform .45s cubic-bezier(.16,1,.3,1);border:1px solid var(--ouro-30)}
-.float-img.on{opacity:1;transform:scale(1)}
-.float-img img{width:100%;height:100%;object-fit:cover}
-
-/* ── MANIFESTO + NÚMEROS ── */
-.manifesto{text-align:center}
-.manifesto blockquote{font-family:var(--corm);font-style:italic;font-weight:300;font-size:clamp(26px,4vw,42px);line-height:1.3;color:var(--marfim);max-width:760px;margin:0 auto 70px}
-.manifesto blockquote em{color:var(--ouro-luz)}
-.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:rgba(248,244,238,.08);border:1px solid rgba(248,244,238,.08)}
-.stat{background:var(--noir);padding:46px 20px;text-align:center}
-.stat-n{font-family:var(--corm);font-style:italic;font-size:clamp(48px,7vw,84px);font-weight:300;color:var(--ouro);line-height:1}
-.stat-l{font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--marfim-55);text-transform:uppercase;margin-top:12px}
-
-/* ── SOBRE A MAIURY ── */
-.sobre-grid{display:grid;grid-template-columns:.85fr 1.15fr;gap:clamp(28px,5vw,64px);align-items:center}
-.sobre-img{position:relative;width:min(100%,360px);aspect-ratio:4/5;margin:0 auto}
-.sobre-img .arch-img{width:100%;height:100%;border-radius:50% 50% 0 0/26% 26% 0 0;overflow:hidden}
-.sobre-img .arch-img img{width:100%;height:100%;object-fit:cover}
-.sobre-img .arch-frame{position:absolute;inset:-12px;border:1px solid var(--ouro-30);border-radius:50% 50% 0 0/26% 26% 0 0;pointer-events:none}
-.sobre-txt p{font-size:15px;line-height:1.8;color:var(--marfim-55);margin-bottom:18px;max-width:520px}
-.sobre-txt .btn{margin-top:8px}
-@media(max-width:900px){.sobre-grid{grid-template-columns:1fr;text-align:left}.sobre-img{margin:0 0 12px}}
-
-/* ── GALERIA (carrossel) ── */
-.gal-wrap{position:relative;margin-top:54px}
-.gal{display:flex;gap:14px;overflow-x:auto;scroll-snap-type:x mandatory;scroll-behavior:smooth;-webkit-overflow-scrolling:touch;padding-bottom:6px;scrollbar-width:none}
-.gal::-webkit-scrollbar{display:none}
-.gal-item{position:relative;overflow:hidden;border-radius:4px;cursor:pointer;flex:0 0 auto;scroll-snap-align:start;width:min(78vw,360px);aspect-ratio:4/4.6}
-.gal-item.wide{width:min(92vw,640px);aspect-ratio:2.6/1.6}
-.gal-item img{width:100%;height:100%;object-fit:cover;transition:transform 1.2s cubic-bezier(.16,1,.3,1)}
-.gal-item:hover img{transform:scale(1.06)}
-.gal-cap{position:absolute;inset:auto 0 0 0;padding:46px 22px 18px;background:linear-gradient(to top,rgba(7,6,10,.9),transparent);font-family:var(--cinzel);font-size:9px;letter-spacing:2.5px;color:var(--ouro-luz);text-transform:uppercase}
-.gal-arrs{display:flex;gap:8px;justify-content:flex-end;margin-top:16px}
-.gal-arr{width:40px;height:40px;border-radius:50%;border:1px solid var(--ouro-30);background:transparent;color:var(--ouro);font-size:16px;cursor:pointer;transition:all .3s;display:flex;align-items:center;justify-content:center}
-.gal-arr:hover{background:var(--ouro-15);border-color:var(--ouro)}
-@media(hover:none){.gal-arrs{display:none}}
-
-/* ── DEPOIMENTOS ── */
-.dep-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:18px;margin-top:54px}
-.dep{background:rgba(248,244,238,.025);border:1px solid rgba(248,244,238,.07);border-radius:6px;padding:38px 30px;position:relative;transition:border-color .4s}
-.dep:hover{border-color:var(--ouro-30)}
-.dep-q{font-family:var(--corm);font-size:90px;line-height:0;color:rgba(201,168,76,.35);position:absolute;top:48px;left:24px}
-.dep p{font-family:var(--corm);font-style:italic;font-size:19px;line-height:1.5;color:var(--marfim);margin:26px 0 22px;position:relative}
-.dep-who{font-family:var(--cinzel);font-size:9px;letter-spacing:2.5px;color:var(--ouro);text-transform:uppercase}
-.dep-who span{display:block;color:var(--marfim-30);margin-top:4px;letter-spacing:2px}
-
-/* ── CTA FINAL ── */
-.cta{background:radial-gradient(ellipse at 50% 0%,rgba(201,168,76,.12),transparent 55%),var(--vinho);text-align:center;padding:clamp(80px,12vw,150px) 20px;border-top:1px solid var(--ouro-15)}
-.cta h2{font-family:var(--corm);font-weight:300;font-size:clamp(38px,6vw,72px);line-height:1.08;color:var(--marfim);margin-bottom:14px}
-.cta h2 em{font-style:italic;color:var(--ouro-luz)}
-.cta p{font-family:var(--cinzel);font-size:10px;letter-spacing:3px;color:rgba(201,168,76,.6);text-transform:uppercase;margin-bottom:40px}
-
-/* ── FOOTER ── */
-footer{border-top:1px solid var(--ouro-15);padding:60px clamp(20px,5vw,72px) 30px;max-width:1340px;margin:0 auto}
-.ft-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr;gap:40px;margin-bottom:50px}
-.ft-logo{font-family:var(--cinzel);font-size:13px;letter-spacing:3px;color:var(--ouro);text-transform:uppercase;margin-bottom:14px}
-.ft-slogan{font-family:var(--corm);font-style:italic;font-size:18px;color:var(--marfim-55);line-height:1.5;max-width:300px}
-.ft-h{font-family:var(--cinzel);font-size:9px;letter-spacing:3px;color:var(--marfim-30);text-transform:uppercase;margin-bottom:16px}
-.ft-item{font-size:13px;color:var(--marfim-55);line-height:2;display:block;text-decoration:none;transition:color .3s}
-a.ft-item:hover{color:var(--ouro-luz)}
-.ft-bottom{border-top:1px solid rgba(248,244,238,.07);padding-top:24px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:11px;color:var(--marfim-30);letter-spacing:.5px}
-
-/* ── LOGIN MODAL ── */
-.molov{position:fixed;inset:0;z-index:300;background:rgba(7,6,10,.8);backdrop-filter:blur(10px);display:none;align-items:center;justify-content:center;padding:18px}
-.molov.show{display:flex}
-.mol{background:#0D0B13;border:1px solid var(--ouro-30);border-radius:18px;width:100%;max-width:420px;padding:36px 32px;animation:molIn .4s cubic-bezier(.16,1,.3,1);max-height:92vh;overflow-y:auto}
-@keyframes molIn{from{opacity:0;transform:scale(.96) translateY(16px)}to{opacity:1;transform:scale(1) translateY(0)}}
-.mol-head{display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px}
-.mol-title{font-family:var(--corm);font-style:italic;font-size:30px;font-weight:400;color:var(--marfim)}
-.mol-x{width:30px;height:30px;border-radius:50%;border:1px solid rgba(248,244,238,.12);background:none;color:var(--marfim-55);cursor:pointer;font-size:13px;transition:all .3s}
-.mol-x:hover{border-color:var(--ouro);color:var(--ouro)}
-.mol-sub{font-family:var(--cinzel);font-size:9px;letter-spacing:2.5px;color:rgba(201,168,76,.6);text-transform:uppercase;margin-bottom:24px}
-.fld-row{display:grid;grid-template-columns:1fr 1fr;gap:12px}
-.fld-hint{display:block;font-family:var(--dm);font-size:10px;color:var(--marfim-30);margin-top:5px;letter-spacing:.3px;text-transform:none}
-.fld{margin-bottom:14px}
-.fld label{display:block;font-family:var(--cinzel);font-size:8px;letter-spacing:2px;color:rgba(201,168,76,.65);text-transform:uppercase;margin-bottom:7px}
-.fld input{width:100%;background:rgba(248,244,238,.04);border:1px solid rgba(248,244,238,.1);border-radius:10px;padding:13px 16px;font-family:var(--dm);font-size:14px;color:var(--marfim);outline:none;transition:all .3s}
-.fld input:focus{border-color:var(--ouro);background:var(--ouro-15)}
-.fld input::placeholder{color:rgba(248,244,238,.25)}
-.mol-note{font-size:12px;color:var(--marfim-55);line-height:1.6;margin-top:14px;text-align:center}
-.mol-or{display:flex;align-items:center;gap:14px;margin:14px 0}
-.mol-or::before,.mol-or::after{content:'';flex:1;height:1px;background:rgba(248,244,238,.1)}
-.mol-or span{font-family:var(--cinzel);font-size:9px;letter-spacing:2px;color:var(--marfim-30);text-transform:uppercase}
-.mol-wa{display:flex;align-items:center;justify-content:center;gap:9px;width:100%;background:transparent;border:1px solid rgba(107,168,107,.4);color:#7DB87D;border-radius:40px;padding:14px;font-family:var(--cinzel);font-size:10px;letter-spacing:1.5px;text-transform:uppercase;cursor:pointer;transition:all .3s;text-decoration:none}
-.mol-wa:hover{background:rgba(107,168,107,.12);border-color:#7DB87D}
-.mol-note em{color:var(--ouro-luz);font-style:italic;font-family:var(--corm)}
-.done-crown{font-size:54px;margin-bottom:14px;animation:popcrown .5s cubic-bezier(.34,1.56,.64,1)}
-@keyframes popcrown{from{transform:scale(0);opacity:0}to{transform:scale(1);opacity:1}}
-.fld input[type="date"]::-webkit-calendar-picker-indicator,.fld input[type="time"]::-webkit-calendar-picker-indicator{filter:invert(.7) sepia(1) saturate(3) hue-rotate(10deg)}
-.mol-btn{width:100%;background:linear-gradient(135deg,var(--ouro),var(--ouro-luz));color:#000;border:none;border-radius:40px;padding:15px;font-family:var(--cinzel);font-size:10px;font-weight:500;letter-spacing:2.5px;text-transform:uppercase;cursor:pointer;transition:all .35s cubic-bezier(.34,1.56,.64,1);margin-top:6px}
-.mol-btn:hover{transform:translateY(-2px);box-shadow:0 12px 32px var(--ouro-30)}
-.mol-err{display:none;background:rgba(180,60,60,.15);border:1px solid rgba(180,60,60,.3);color:#E08080;font-size:12px;padding:10px 14px;border-radius:8px;margin-bottom:14px}
-.mol-err.show{display:block}
-
-/* ── TOAST ── */
-.toast{position:fixed;bottom:26px;left:50%;transform:translateX(-50%) translateY(12px);background:#0D0B13;border:1px solid var(--ouro-30);color:var(--ouro);font-family:var(--cinzel);font-size:10px;letter-spacing:2px;text-transform:uppercase;padding:13px 26px;border-radius:40px;z-index:999;opacity:0;pointer-events:none;transition:all .4s cubic-bezier(.34,1.56,.64,1)}
-.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
-
-/* ── RESPONSIVE ── */
-@media(max-width:1100px){
-  .hero{grid-template-columns:1fr;padding-top:110px;text-align:left}
-  .hero-right{order:-1;margin-bottom:8px}
-  .arch{width:min(70%,320px)}
+/* HERO */
+.hero{min-height:100svh;display:flex;align-items:center;padding:130px 0 80px;overflow:hidden;background:var(--off)}
+.hero::before{content:"";position:absolute;inset:0;background:
+  linear-gradient(115deg,transparent 0 38%,rgba(255,255,255,.65) 38% 44%,transparent 44% 52%,rgba(255,255,255,.45) 52% 55%,transparent 55%),
+  radial-gradient(ellipse at 85% 30%,var(--champ),transparent 60%);pointer-events:none}
+.hero-grid{position:relative;display:grid;grid-template-columns:1.05fr .95fr;gap:70px;align-items:center}
+.hero h1{margin:26px 0 24px}
+.hero .ctas{display:flex;gap:12px;flex-wrap:wrap;margin-top:36px}
+.hero .note{margin-top:30px;display:flex;align-items:center;gap:14px;font-size:14px;color:var(--text)}
+.hero .note b{white-space:nowrap;font-family:var(--serif);font-size:30px;font-weight:400;color:var(--ink)}
+.frame{position:relative;justify-self:center;width:min(460px,100%)}
+.frame .ph-main{position:relative;z-index:2;border-radius:260px 260px 16px 16px;overflow:hidden;aspect-ratio:4/5;background:var(--champ)}
+.frame .ph-main img{width:100%;height:100%;object-fit:cover;object-position:50% 20%}
+.frame::before{content:"";position:absolute;inset:-18px 22px 22px -18px;border:1px solid var(--gold);border-radius:270px 270px 18px 18px;z-index:1}
+.frame .ph-mini{position:absolute;z-index:3;left:-70px;bottom:46px;width:150px;aspect-ratio:3/4;border-radius:12px;overflow:hidden;border:6px solid var(--off);box-shadow:0 24px 50px -24px rgba(31,23,18,.45)}
+.frame .ph-mini img{width:100%;height:100%;object-fit:cover}
+.frame .sign{position:absolute;z-index:3;right:-26px;top:58%;font-family:var(--script);font-size:54px;color:var(--accent);line-height:1;transform:rotate(-8deg);text-shadow:0 2px 0 var(--off)}
+.frame .mo-deco{position:absolute;z-index:0;right:-60px;top:-30px;width:140px;color:var(--gold);opacity:.18}
+@media(max-width:860px){
+  .hero{padding:104px 0 60px;min-height:auto}
+  .hero-grid{grid-template-columns:1fr;gap:56px}
+  .frame{order:-1;width:min(330px,82%)}
+  .frame .ph-mini{left:-40px;width:110px;bottom:30px}
+  .frame .sign{font-size:40px;right:-14px}
+  .hero .ctas .btn{width:100%}
 }
-@media(max-width:768px){
-  .svc-row{grid-template-columns:56px 1fr auto;gap:14px;padding:20px 8px}
-  .svc-num{display:none}
-  .svc-thumb{display:block;width:56px;height:56px;border-radius:50% 50% 6px 6px;overflow:hidden;border:1px solid var(--ouro-30);flex-shrink:0}
-  .svc-thumb img{width:100%;height:100%;object-fit:cover}
-  .svc-dur,.svc-arrow{display:none}
-  .stats{grid-template-columns:1fr}
-  .ft-grid{grid-template-columns:1fr;gap:30px}
-  .float-img{display:none}
-  .hero h1{font-size:clamp(44px,12vw,72px)}
-  .fld-row{grid-template-columns:1fr}
-  .topbar{padding:0 18px}
-  .tb-ig{display:none}
-  .tb-cta{padding:10px 18px;font-size:9px}
-  .tb-logo{font-size:10px}
-}
-@media(prefers-reduced-motion:reduce){
-  *,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important}
-  .preloader{display:none}
-  .cursor{display:none}
-  .mq-track{animation:none}
-}
+
+/* SERVIÇOS */
+.head{display:flex;justify-content:space-between;align-items:flex-end;gap:30px;flex-wrap:wrap;margin-bottom:46px}
+.head h2{margin-top:16px;max-width:700px}
+.head p{max-width:420px;margin-top:14px}
+.nav-arrows{display:flex;gap:10px}
+.nav-arrows button{width:54px;height:54px;border-radius:50%;border:1px solid var(--brown);background:transparent;color:var(--brown);cursor:pointer;display:grid;place-items:center;transition:all .25s}
+.nav-arrows button:hover{background:var(--brown);color:#fff}
+.nav-arrows svg{width:20px;height:20px}
+.rail{display:flex;gap:22px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;padding:4px 2px 10px;cursor:grab}
+.rail::-webkit-scrollbar{display:none}
+.rail.drag{cursor:grabbing;scroll-snap-type:none}
+.svc{flex:0 0 calc((100% - 44px)/3);scroll-snap-align:start;background:#fff;border-radius:var(--r);overflow:hidden;display:flex;flex-direction:column;border:1px solid var(--line);transition:transform .45s var(--ease),box-shadow .45s}
+.svc:hover{transform:translateY(-8px);box-shadow:0 34px 60px -38px rgba(31,23,18,.5)}
+.svc figure{position:relative;aspect-ratio:4/3.6;overflow:hidden;background:var(--champ)}
+.svc img{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform 1.2s var(--ease)}
+.svc:hover img{transform:scale(1.06)}
+.svc figure span{position:absolute;left:16px;top:16px;background:rgba(250,247,242,.92);color:var(--ink);font-size:12px;letter-spacing:.14em;padding:6px 12px;border-radius:99px;font-weight:500}
+.svc .b{padding:26px 26px 28px;display:flex;flex-direction:column;gap:10px;flex:1}
+.svc .b p{font-size:16px}
+.svc .b .btn{margin-top:auto;width:100%;min-height:50px}
+@media(max-width:1000px){.svc{flex-basis:calc((100% - 22px)/2)}}
+@media(max-width:640px){.nav-arrows{display:none}.svc{flex-basis:84%}.rail{margin-inline:-20px;padding-inline:20px;scroll-padding-inline:20px}}
+
+/* SOBRE */
+.about{background:var(--champ)}
+.about-grid{display:grid;grid-template-columns:.95fr 1.05fr;gap:80px;align-items:center}
+.about .pic{position:relative}
+.about .pic .img{border-radius:var(--r);overflow:hidden;aspect-ratio:4/5;position:relative;z-index:2}
+.about .pic img{width:100%;height:112%;object-fit:cover;object-position:50% 15%}
+.about .pic::before{content:"";position:absolute;inset:28px -24px -24px 28px;border:1px solid var(--gold);border-radius:var(--r);z-index:1}
+.about .pic .badge{position:absolute;z-index:3;right:-34px;top:40px;background:var(--brown);color:#fff;border-radius:16px;padding:18px 20px;text-align:center;box-shadow:0 20px 40px -22px rgba(0,0,0,.5)}
+.about .pic .badge b{display:block;font-family:var(--serif);font-size:36px;font-weight:400;line-height:1;color:var(--gold-l)}
+.about .pic .badge small{font-size:11px;letter-spacing:.16em;text-transform:uppercase}
+.about h2{margin:16px 0 24px}
+.about p+p{margin-top:14px}
+.about blockquote{margin:30px 0;padding:24px 28px;background:var(--off);border-radius:16px;font-family:var(--serif);font-style:italic;font-size:21px;line-height:1.5;color:var(--ink);border-left:2px solid var(--gold)}
+.about .facts{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin:24px 0}
+.about .facts div{background:var(--off);border-radius:14px;padding:16px 18px;font-size:15px}
+.about .facts b{display:block;font-size:11px;letter-spacing:.18em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px}
+.about .signature{font-family:var(--script);font-size:56px;color:var(--accent);line-height:1;margin:6px 0 26px}
+@media(max-width:860px){.about-grid{grid-template-columns:1fr;gap:56px}.about .pic{max-width:420px;margin-right:24px}.about .pic .badge{right:-16px}.about .facts{grid-template-columns:1fr}}
+
+/* LOCALIZAÇÃO */
+.loc-grid{display:grid;grid-template-columns:1fr 1fr;gap:28px;margin-top:10px}
+.loc-card{background:#fff;border:1px solid var(--line);border-radius:var(--r);overflow:hidden;display:grid;grid-template-rows:240px 1fr}
+.loc-card .img{overflow:hidden}
+.loc-card .img img{width:100%;height:100%;object-fit:cover;object-position:50% 40%}
+.loc-info{padding:30px;display:grid;gap:18px;font-size:16px}
+.loc-info b{display:block;font-size:11px;letter-spacing:.2em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:3px}
+.loc-info .btns{display:flex;gap:10px;flex-wrap:wrap}
+.map{position:relative;border-radius:var(--r);overflow:hidden;min-height:440px;border:1px solid var(--line);background:
+ linear-gradient(0deg,rgba(184,146,90,.13) 1px,transparent 1px) 0 0/40px 40px,
+ linear-gradient(90deg,rgba(184,146,90,.13) 1px,transparent 1px) 0 0/40px 40px,
+ linear-gradient(28deg,transparent 47%,#fff 47.5% 51%,transparent 51.5%),
+ linear-gradient(120deg,transparent 58%,#fff 58.5% 61%,transparent 61.5%),
+ linear-gradient(75deg,transparent 22%,rgba(255,255,255,.8) 22.5% 24%,transparent 24.5%),var(--champ)}
+.map iframe{position:absolute;inset:0;width:100%;height:100%;border:0}
+.map .facade{position:absolute;inset:0;display:grid;place-items:center;text-align:center;gap:14px;align-content:center;padding:20px}
+.map .pin{width:64px;height:64px;border-radius:50% 50% 50% 0;transform:rotate(-45deg);background:var(--brown);display:grid;place-items:center;box-shadow:0 0 0 12px rgba(59,42,33,.12);margin:0 auto}
+.map .pin svg{transform:rotate(45deg);width:28px;color:var(--gold-l)}
+.map .facade p{font-family:var(--serif);font-size:22px;color:var(--ink)}
+@media(max-width:860px){.loc-grid{grid-template-columns:1fr}.map{min-height:320px}}
+
+/* INSTAGRAM */
+.ig{background:#fff}
+.ig .profile{display:flex;align-items:center;gap:14px;margin-top:18px}
+.ig .profile .av{width:52px;height:52px;border-radius:50%;padding:2px;background:linear-gradient(45deg,#E9C46A,#C8553D,#8E3B7A)}
+.ig .profile .av img{width:100%;height:100%;border-radius:50%;object-fit:cover;border:2px solid #fff}
+.ig .profile b{display:block;color:var(--ink);font-weight:500}
+.ig .profile small{font-size:14px}
+.post{flex:0 0 calc((100% - 66px)/4);scroll-snap-align:start;position:relative;aspect-ratio:4/5;border-radius:16px;overflow:hidden;display:block;background:var(--champ)}
+.post img,.post video{width:100%;height:100%;object-fit:cover;object-position:50% 25%;transition:transform 1s var(--ease)}
+.post:hover img{transform:scale(1.06)}
+.post .ic{position:absolute;right:12px;top:12px;width:34px;height:34px;border-radius:50%;background:rgba(31,23,18,.55);display:grid;place-items:center;color:#fff}
+.post .ic svg{width:18px;height:18px}
+.post .cap{position:absolute;inset:auto 0 0;padding:40px 16px 14px;background:linear-gradient(transparent,rgba(31,23,18,.75));color:#fff;font-size:13.5px;line-height:1.4;opacity:0;transform:translateY(10px);transition:all .35s var(--ease)}
+.post:hover .cap{opacity:1;transform:none}
+@media(max-width:1000px){.post{flex-basis:calc((100% - 22px)/2)}}
+@media(max-width:640px){.post{flex-basis:70%}}
+.ig-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;flex-wrap:wrap;margin-top:40px;padding:28px 32px;border-radius:var(--r);background:var(--off);border:1px solid var(--line)}
+.ig-cta p{font-family:var(--serif);font-size:22px;color:var(--ink);max-width:620px;line-height:1.35}
+
+/* CTA FINAL */
+.final{color:#fff;text-align:center;overflow:hidden;padding:150px 0}
+.final .bg{position:absolute;inset:0;z-index:0}
+.final .bg img{width:100%;height:100%;object-fit:cover;object-position:50% 30%}
+.final .bg::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(25,18,14,.78),rgba(25,18,14,.86))}
+.final .wrap{position:relative;z-index:1}
+.final .tag{color:var(--gold-l)}
+.final h2{color:#fff;font-size:clamp(40px,6vw,82px);margin:20px auto 22px;max-width:900px}
+.final h2 em{color:var(--gold-l)}
+.final p{max-width:560px;margin:0 auto 38px;font-size:18.5px;color:#EDE3D8}
+.final .mini{margin-top:22px;font-size:14px;color:#D9CBBB}
+
+/* FOOTER */
+footer{background:var(--brown2);color:#D9CBBB;padding:76px 0 30px;font-size:15px}
+.fcols{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.3fr .9fr;gap:36px}
+footer .brand{color:#fff}
+footer .brand small{color:#BFAE9C}
+footer .slogan{font-family:var(--serif);font-style:italic;color:var(--gold-l);font-size:18px;margin:16px 0 8px}
+footer h4{font-size:11.5px;letter-spacing:.22em;text-transform:uppercase;color:var(--gold-l);font-weight:600;margin-bottom:16px}
+footer ul{list-style:none;display:grid;gap:8px}
+footer a{text-decoration:none}
+footer a:hover{color:#fff}
+.legal{margin-top:54px;padding-top:24px;border-top:1px solid #4a3a30;display:flex;flex-wrap:wrap;justify-content:space-between;gap:16px;font-size:13px;color:#BFAE9C}
+.legal nav{display:flex;gap:18px;flex-wrap:wrap}
+.legal button{background:none;border:0;color:inherit;font:inherit;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+.lgpd{font-size:12.5px;color:#A8988A;margin-top:14px;max-width:760px}
+@media(max-width:1000px){.fcols{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.fcols{grid-template-columns:1fr}}
+
+/* flutuantes */
+.wa-float{position:fixed;right:22px;bottom:22px;z-index:50;width:58px;height:58px;border-radius:50%;background:#25D366;color:#fff;display:grid;place-items:center;box-shadow:0 14px 30px -10px rgba(0,0,0,.45);transition:transform .3s var(--ease)}
+.wa-float:hover{transform:scale(1.08)}
+.wa-float svg{width:30px;height:30px}
+.top{position:fixed;right:30px;bottom:92px;z-index:50;width:42px;height:42px;border-radius:50%;border:1px solid var(--line);background:#fff;color:var(--ink);display:grid;place-items:center;cursor:pointer;opacity:0;pointer-events:none;transition:all .3s}
+.top.show{opacity:1;pointer-events:auto}
+.top svg{width:18px;height:18px}
+
+/* modal legal */
+dialog{border:0;border-radius:20px;max-width:620px;width:calc(100% - 32px);padding:34px;color:var(--text);background:var(--off)}
+dialog::backdrop{background:rgba(31,23,18,.6)}
+dialog h3{margin-bottom:14px}
+dialog p{font-size:15px;margin-bottom:10px}
+dialog button{margin-top:10px}
+
+.js .rv{opacity:0;transform:translateY(28px)}
+@media (prefers-reduced-motion:reduce){.js .rv{opacity:1;transform:none}html{scroll-behavior:auto}}
 </style>
 </head>
 <body>
-<div class="preloader" id="pre"><div class="pre-mono">M<em>·</em>O</div><div class="pre-line"></div></div>
-<div class="cursor" id="cursor"></div>
-<div class="toast" id="toast"></div>
-<div class="float-img" id="floatImg"><img src="" alt=""></div>
+<script>document.documentElement.classList.add('js')</script>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="mo" viewBox="18 16 655 844"><path fill="currentColor" fill-rule="evenodd" d="M548.3,855.9C544.9,854.9 542.0,851.7 542.0,848.9C542.0,848.0 545.3,843.9 549.3,839.8C564.6,824.2 574.6,795.2 576.4,761.0C576.8,754.7 578.2,731.0 579.5,708.5C580.9,686.0 582.5,658.7 583.0,648.0C583.6,637.3 584.5,620.9 585.0,611.5C586.2,592.5 587.4,569.3 588.9,536.5C589.5,524.4 590.4,509.8 591.0,504.0C591.5,498.2 592.4,484.5 593.0,473.5C593.5,462.5 594.4,447.6 594.9,440.5C597.3,408.2 597.3,407.1 596.0,405.5C593.8,402.8 591.4,403.9 586.1,410.1C580.0,417.3 579.3,419.6 580.9,426.4C585.3,445.3 585.0,530.0 580.5,549.8C579.7,553.2 578.6,560.0 578.0,564.8C577.5,569.6 575.9,577.3 574.6,582.0C573.2,586.7 570.0,597.9 567.4,607.0C560.4,632.1 546.7,663.0 532.3,686.2C520.1,705.9 491.4,737.6 479.5,744.5C476.8,746.1 471.6,749.5 468.0,752.1C447.8,766.6 427.4,774.5 398.5,779.0C383.9,781.3 363.4,779.4 342.0,773.9C315.1,767.0 279.8,745.0 255.9,720.3C248.1,712.3 228.3,686.8 219.3,673.1C210.1,659.3 193.9,626.2 189.5,612.1C187.4,605.7 184.3,596.5 182.5,591.5C180.7,586.5 178.9,580.7 178.6,578.5C178.2,576.3 177.0,570.9 176.0,566.5C169.5,538.9 166.6,496.7 168.9,461.0C169.6,450.8 170.5,440.7 171.0,438.5C171.5,436.3 172.4,427.1 173.0,418.0C174.0,402.7 176.3,388.6 179.5,376.5C180.3,373.8 181.4,368.1 181.9,363.8C183.6,351.7 186.5,348.1 192.5,350.8C195.3,352.1 199.8,361.2 200.6,367.3C201.2,371.5 199.3,383.2 196.4,393.5C195.6,396.2 194.6,405.2 194.1,413.5C193.4,424.1 192.5,430.4 190.9,435.0C188.9,441.1 188.8,442.8 189.4,461.5C189.7,472.5 190.4,483.3 191.0,485.5C191.6,487.7 192.7,497.5 193.6,507.3C195.1,525.2 196.9,535.0 203.4,562.5C209.8,589.7 227.9,631.7 243.3,655.0C274.1,701.7 304.3,729.1 340.3,743.2C363.7,752.3 367.2,753.0 388.1,753.0C405.5,753.0 407.5,752.8 414.6,750.5C418.8,749.1 422.7,748.0 423.2,748.0C423.8,748.0 430.2,745.3 437.4,742.0C444.7,738.7 451.1,736.0 451.6,736.0C452.2,736.0 453.9,734.7 455.4,733.1C463.4,724.4 475.6,713.7 483.5,708.3C485.4,707.0 488.1,704.2 489.4,702.2C490.7,700.2 493.7,696.2 496.2,693.5C504.1,684.6 517.9,662.0 528.5,640.5C543.9,609.3 552.8,580.1 559.7,537.5C562.3,521.5 562.4,518.6 562.5,487.5C562.5,469.4 562.2,453.3 561.7,451.8C561.2,449.9 560.1,448.8 558.3,448.4C554.6,447.4 551.8,450.7 515.0,498.5C507.8,507.9 498.5,519.9 494.2,525.3C490.0,530.8 484.0,538.7 481.0,543.0C478.0,547.3 470.8,556.0 465.0,562.3C450.8,577.7 447.2,582.2 439.2,593.7C432.6,603.3 423.1,615.5 416.1,623.6C412.2,628.0 396.1,648.5 388.3,659.0C382.1,667.3 378.0,669.9 374.5,667.6C371.4,665.6 367.3,659.1 365.3,653.4C362.6,645.5 365.7,640.2 395.5,602.0C399.2,597.3 406.7,587.4 412.2,580.0C417.8,572.6 423.9,564.8 425.9,562.7C427.9,560.6 433.3,553.3 438.0,546.5C442.7,539.6 451.7,527.2 458.1,518.8C464.5,510.4 473.7,498.3 478.6,492.0C505.4,456.8 539.3,411.4 544.2,404.0C547.3,399.3 554.3,390.0 559.8,383.3C565.3,376.6 572.2,367.6 575.1,363.3C578.0,359.0 581.8,353.8 583.6,351.8C585.4,349.8 587.6,346.6 588.6,344.8C589.5,343.0 592.6,339.3 595.4,336.5C600.2,331.8 619.2,306.7 623.9,299.0C625.1,297.1 626.5,293.9 627.0,291.9C627.8,289.1 628.9,287.9 632.0,286.5C635.3,285.0 636.5,283.6 638.9,278.5C641.3,273.4 642.5,272.1 646.0,270.5C650.7,268.4 654.0,264.7 654.0,261.6C654.0,258.6 651.3,255.0 648.9,255.0C646.2,255.0 639.3,259.5 637.9,262.2C637.3,263.5 635.4,265.6 633.8,266.8C632.2,268.1 629.8,271.4 628.5,274.1C626.9,277.1 624.5,279.9 622.2,281.4C617.4,284.4 616.4,285.6 615.1,290.5C614.3,293.6 612.9,295.4 609.6,297.7C607.1,299.5 604.2,302.7 603.0,304.9C601.9,307.1 598.5,311.8 595.4,315.2C592.3,318.7 587.5,324.9 584.7,329.0C581.9,333.1 577.5,339.3 574.7,342.8C572.0,346.2 566.6,353.5 562.7,358.9C558.7,364.4 548.3,378.0 539.5,389.2C530.6,400.4 522.4,411.1 521.0,413.0C519.7,414.9 514.3,421.8 509.1,428.4C503.8,434.9 497.2,443.3 494.5,447.0C491.8,450.7 486.1,457.8 482.0,462.8C477.9,467.7 470.7,477.0 466.0,483.5C458.2,494.3 445.9,510.3 437.4,520.7C435.5,523.1 431.3,526.7 428.2,528.9C422.6,532.7 418.5,537.9 402.8,560.7C398.3,567.3 383.6,586.8 376.1,596.0C373.7,599.0 369.7,604.6 367.2,608.5C358.8,621.6 354.5,625.9 351.4,624.2C349.0,622.8 334.5,597.0 308.2,547.0C299.7,530.8 288.2,508.9 282.7,498.5C277.2,488.1 262.3,458.8 249.5,433.5C236.8,408.2 223.8,382.9 220.7,377.3C217.7,371.7 212.7,361.8 209.6,355.3C206.6,348.8 201.7,338.8 198.7,333.0C188.3,312.7 181.8,300.5 179.2,296.0C177.7,293.5 173.3,285.2 169.4,277.5C156.3,251.6 149.2,238.5 147.0,236.3C144.5,233.6 140.4,233.3 139.1,235.8C138.0,237.8 136.3,255.3 135.5,273.0C134.3,298.5 131.9,336.5 131.4,338.0C130.6,340.1 129.0,360.6 128.0,380.0C127.5,390.6 126.7,398.3 125.6,401.4C124.4,405.0 124.0,410.1 124.0,420.9C124.0,438.4 122.4,477.2 121.0,496.0C120.4,503.4 119.7,544.1 119.5,586.5C119.1,659.2 118.8,673.7 115.9,726.0C113.8,763.5 114.0,772.0 117.1,784.0C120.9,799.3 126.0,816.1 127.8,819.5C130.4,824.6 142.3,838.0 149.4,843.7C151.7,845.6 151.9,846.3 151.0,848.0C150.4,849.1 148.9,850.2 147.7,850.4C146.5,850.6 141.4,851.6 136.5,852.6C128.5,854.3 122.0,854.5 77.3,854.7C28.5,854.8 27.0,854.8 24.5,852.8C20.8,849.9 21.2,846.6 25.7,843.3C27.8,841.8 34.1,835.8 39.8,830.0C48.3,821.3 50.9,817.8 55.0,810.0C68.4,783.8 70.7,770.9 72.5,711.0C72.8,700.3 73.5,684.3 74.1,675.5C74.7,666.7 75.6,644.0 76.1,625.0C77.9,554.4 78.9,527.0 79.9,521.3C80.4,518.1 81.1,503.4 81.5,488.5C81.8,473.6 82.5,455.4 83.0,448.0C84.0,434.3 86.3,361.8 86.6,334.5C86.8,305.2 89.2,225.3 90.0,214.5C91.5,197.1 93.2,116.0 92.5,100.0C91.8,84.8 90.5,75.9 87.1,62.3C84.6,52.1 82.3,47.6 75.7,39.7C66.3,28.6 65.0,25.1 68.8,21.7C76.0,15.1 113.6,32.8 129.6,50.2C135.6,56.7 152.2,86.3 155.0,95.5C155.7,97.7 161.6,110.5 168.3,124.0C174.9,137.5 182.9,153.9 186.0,160.5C189.0,167.1 193.3,175.6 195.4,179.3C197.5,183.0 200.7,189.6 202.5,193.9C206.7,203.9 210.2,210.8 214.5,217.5C221.0,227.6 273.9,334.3 278.9,347.4C280.6,351.7 283.7,358.2 285.8,361.9C291.9,372.1 295.5,379.7 298.9,389.3C300.6,394.1 303.0,400.4 304.4,403.3C305.7,406.1 308.8,413.2 311.4,419.0C313.9,424.8 318.0,433.3 320.4,438.0C322.8,442.7 326.5,451.2 328.5,456.8C330.6,462.5 334.7,471.2 337.7,476.1C340.6,481.0 344.2,488.2 345.6,492.2C347.0,496.1 350.9,504.2 354.2,510.3C357.5,516.3 361.0,523.6 362.0,526.4C364.9,534.8 371.0,547.3 373.3,549.8C377.5,554.3 382.1,552.1 391.0,541.5C394.6,537.2 399.5,531.4 401.9,528.7C404.3,525.9 408.3,520.4 410.8,516.5C413.3,512.7 420.1,503.3 425.9,495.7C431.7,488.1 439.6,477.5 443.4,472.2C447.1,466.9 452.6,459.6 455.5,456.0C463.4,446.1 489.2,411.6 502.9,392.5C509.6,383.1 517.3,372.6 520.0,369.0C522.7,365.4 527.1,359.6 529.7,356.1C532.4,352.5 537.0,346.6 540.0,342.9C547.6,333.6 562.4,313.2 564.5,309.0C565.5,307.1 568.3,303.2 570.8,300.5C573.2,297.8 578.5,290.6 582.5,284.5C586.4,278.4 591.5,271.3 593.8,268.6C596.0,265.9 599.9,260.0 602.5,255.5C605.0,251.0 609.4,244.4 612.2,240.9C615.1,237.3 618.4,231.9 619.6,228.5C620.8,225.2 622.4,221.1 623.1,219.4C624.3,216.4 624.1,216.0 621.5,212.9C616.0,206.3 614.7,200.3 618.0,197.0C619.8,195.2 621.3,195.0 631.2,195.0C638.2,195.0 643.4,195.5 645.0,196.3C646.4,197.0 651.8,203.8 657.1,211.4C662.3,219.0 667.4,225.6 668.3,226.2C669.8,227.0 670.0,230.3 670.0,260.0L670.0,293.0L667.0,293.0C661.0,293.0 659.4,296.1 658.6,309.0C658.2,315.3 657.3,322.8 656.5,325.5C654.9,331.2 654.3,348.5 655.4,354.5C656.0,357.6 655.6,360.4 654.0,366.0C652.4,371.2 651.6,376.8 651.4,384.0C650.3,418.0 650.0,425.4 649.0,434.0C647.4,448.9 647.0,455.9 645.9,480.0C645.4,492.4 644.7,505.0 644.5,508.0C641.8,540.8 640.5,553.0 638.9,561.8C637.8,567.5 637.0,575.4 637.0,579.4C637.0,583.4 636.1,590.0 635.1,594.1C633.2,601.6 632.1,618.1 631.4,647.0C631.3,655.0 630.4,671.9 629.4,684.5C628.5,697.1 627.8,708.6 627.8,710.0C627.9,711.4 628.1,719.5 628.4,728.0C628.9,739.1 628.6,747.3 627.4,757.0C624.9,777.4 625.8,796.1 629.9,811.4C634.1,827.0 636.8,832.6 644.6,841.1C652.3,849.4 652.8,852.4 647.0,855.2C643.8,856.8 639.4,857.0 597.5,856.9C572.2,856.9 550.1,856.4 548.3,855.9ZM537.9,319.8C533.7,318.2 529.9,313.7 525.4,304.8C518.0,290.1 509.3,276.9 498.3,263.7C494.3,258.9 490.3,253.8 489.4,252.4C488.5,251.1 482.8,245.6 476.8,240.2C451.9,218.2 428.9,205.6 400.0,198.2C390.2,195.7 388.2,195.6 370.5,195.7C346.1,196.0 337.8,197.6 319.1,206.1C298.0,215.6 288.2,222.0 275.0,234.6C258.7,250.0 253.5,249.7 246.2,232.5C241.7,222.0 242.4,219.5 252.9,208.7C267.3,193.8 286.5,180.0 300.2,174.8C303.0,173.8 308.1,171.6 311.4,170.1C314.8,168.5 320.6,166.7 324.5,166.1C328.4,165.5 335.3,164.0 340.0,162.8C351.3,160.0 382.7,160.6 393.7,163.9C397.5,165.0 405.6,166.8 411.9,167.9C420.3,169.5 425.0,171.0 430.2,173.7C438.7,178.1 441.0,180.9 441.0,186.4C441.0,193.9 442.0,194.4 456.7,195.0C469.3,195.5 469.7,195.6 475.4,199.0C487.8,206.6 515.1,234.2 523.8,248.2C545.6,282.7 554.0,298.6 554.0,305.0C554.0,310.5 547.5,319.3 542.7,320.2C541.4,320.5 539.2,320.3 537.9,319.8Z"/></symbol>
+  <symbol id="wa" viewBox="0 0 24 24"><path fill="currentColor" d="M20.5 3.5A11.9 11.9 0 0 0 1.7 17.6L0 24l6.6-1.7A11.9 11.9 0 0 0 24 12c0-3.2-1.2-6.2-3.5-8.5zM12 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-3.9 1 1-3.8-.2-.4A9.8 9.8 0 1 1 12 21.8zm5.4-7.3c-.3-.1-1.8-.9-2-1-.3-.1-.5-.1-.7.1l-1 1.2c-.2.2-.4.2-.6.1-.3-.1-1.3-.5-2.4-1.5-.9-.8-1.5-1.8-1.7-2.1-.2-.3 0-.5.1-.6l.5-.5.3-.5v-.5l-.9-2.2c-.2-.6-.5-.5-.7-.5h-.6c-.2 0-.5.1-.8.4-.3.3-1 1-1 2.5s1.1 2.9 1.2 3.1c.1.2 2.1 3.2 5.1 4.5.7.3 1.3.5 1.7.6.7.2 1.4.2 1.9.1.6-.1 1.8-.7 2-1.4.2-.7.2-1.3.2-1.4-.1-.2-.3-.2-.6-.4z"/></symbol>
+  <symbol id="ig" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.7"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/></g><circle cx="17.5" cy="6.5" r="1.1" fill="currentColor"/></symbol>
+  <symbol id="arrL" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M15 5l-7 7 7 7"/></symbol>
+  <symbol id="arrR" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.5" d="M9 5l7 7-7 7"/></symbol>
+</svg>
 
-<!-- TOPBAR -->
-<header class="topbar" id="topbar">
-  <div class="tb-logo" onclick="window.scrollTo({top:0,behavior:'smooth'})">Espaço Maiury Oliveira<span>Campo Limpo · Feira de Santana</span></div>
-  <nav class="tb-nav" aria-label="Navegação principal">
-    <a class="tb-ig" href="https://instagram.com/espaco_maiuryoliveira" target="_blank" rel="noopener" aria-label="Instagram do salão">Instagram</a>
-    <a class="tb-cta" onclick="openLogin()">Agendar Horário</a>
-  </nav>
+<!-- HEADER -->
+<header>
+  <div class="wrap">
+    <a href="#inicio" class="brand" aria-label="Studio Maiury Oliveira, início"><svg class="mo" viewBox="18 16 655 844"><use href="#mo"/></svg><span><b>Maiury Oliveira</b><small>Studio de beleza</small></span></a>
+    <nav class="pillnav" aria-label="Principal"><a href="#servicos">Serviços</a><a href="#sobre">Quem sou eu</a><a href="#localizacao">Localização</a><a href="#instagram">Instagram</a></nav>
+    <a class="btn" data-wa="header" href="#">Agendar</a>
+    <button class="burger" aria-label="Abrir menu" aria-expanded="false"><i></i><i></i></button>
+  </div>
 </header>
-
-<main>
-<!-- HERO -->
-<section class="hero" aria-label="Apresentação">
-  <div>
-    <div class="hero-tag">✦ Campo Limpo · Feira de Santana — BA</div>
-    <h1>
-      <span class="l"><span>Onde toda mulher</span></span>
-      <span class="l"><span>descobre que já</span></span>
-      <span class="l"><span class="reina">nasceu rainha.</span></span>
-    </h1>
-    <div class="hero-meta"><span>Terça a Sábado</span><span class="dot"></span><span>08h às 20h</span><span class="dot"></span><span>@espaco_maiuryoliveira</span></div>
-    <div class="hero-cta">
-      <a class="btn btn-ouro" onclick="openLogin()">Agendar Agora</a>
-      <a class="btn btn-ghost" href="#servicos">Ver Serviços</a>
-    </div>
-  </div>
-  <div class="hero-right">
-    <div class="arch">
-      <div class="arch-img"><img id="heroImg" src="https://picsum.photos/seed/maiury-hero/900/1200" alt="Mulher com cabelo impecável em salão de luxo"></div>
-      <div class="arch-frame"></div>
-      <div class="arch-caption">Desde sempre, realeza</div>
-    </div>
-  </div>
-  <div class="hero-scroll">Descubra ↓</div>
-</section>
-
-<!-- MARQUEE -->
-<div class="marquee" aria-hidden="true">
-  <div class="mq-track">
-    <span>Rainha <i>✦</i> Campo Limpo <i>✦</i> Realeza <i>✦</i> Feira de Santana <i>✦</i> Beleza <i>✦</i> Coroação <i>✦</i></span>
-    <span>Rainha <i>✦</i> Campo Limpo <i>✦</i> Realeza <i>✦</i> Feira de Santana <i>✦</i> Beleza <i>✦</i> Coroação <i>✦</i></span>
-  </div>
+<div class="mnav" aria-hidden="true">
+  <button class="close" aria-label="Fechar menu">×</button>
+  <a class="l" href="#inicio">Início</a><a class="l" href="#servicos">Serviços</a><a class="l" href="#sobre">Quem sou eu</a><a class="l" href="#localizacao">Localização</a><a class="l" href="#instagram">Instagram</a>
+  <a class="btn light" data-wa="menu" href="#"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Agende sua experiência</a>
 </div>
 
-<!-- SERVIÇOS -->
-<section class="sec" id="servicos" aria-label="Serviços">
-  <div class="rv">
-    <div class="sec-eyebrow">Nº 01 — O Cardápio</div>
-    <h2 class="sec-title">Serviços <em>&amp; Rituais</em></h2>
-    <p class="sec-sub">Cada serviço é um ritual. Preço claro, hora marcada, resultado de revista.</p>
-  </div>
-  <div class="svc-list rv" id="svcList"></div>
-</section>
-
-<!-- MANIFESTO + NÚMEROS -->
-<section class="sec manifesto" aria-label="Manifesto">
-  <blockquote class="rv">"Luxo não é distância. <em>É cuidado em cada detalhe</em> — e agora ele mora no Campo Limpo."</blockquote>
-  <div class="stats rv">
-    <div class="stat"><div class="stat-n" data-count="500" data-prefix="+">0</div><div class="stat-l">Clientes atendidas</div></div>
-    <div class="stat"><div class="stat-n" data-count="8">0</div><div class="stat-l">Serviços exclusivos</div></div>
-    <div class="stat"><div class="stat-n" data-count="6">0</div><div class="stat-l">Dias por semana</div></div>
-  </div>
-</section>
-
-<!-- SOBRE A MAIURY -->
-<section class="sec sobre" aria-label="Sobre a Maiury">
-  <div class="sobre-grid">
-    <div class="sobre-img rv">
-      <div class="arch-img"><img loading="lazy" src="https://picsum.photos/seed/maiury-retrato/800/1000" alt="Maiury Oliveira, proprietária do salão"></div>
-      <div class="arch-frame"></div>
+<main>
+<!-- 1. HERO -->
+<section class="hero" id="inicio">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="tag h-in">Studio de beleza | Feira de Santana</span>
+      <h1 class="split">Seu cabelo merece <em>ser cuidado</em> antes de ser transformado.</h1>
+      <p class="sub h-in">Alisamentos, terapia capilar e cortes com avaliação personalizada, produtos profissionais e um atendimento pensado para você sair confiante, linda e leve.</p>
+      <div class="ctas h-in">
+        <a class="btn" data-wa="hero" data-msg="Olá, Maiury! Vim pelo site e quero agendar minha experiência." href="#"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Agende sua experiência</a>
+        <a class="btn ghost" href="#servicos">Conheça nosso studio</a>
+      </div>
+      <div class="note h-in"><b>4,6 mil</b><span>mulheres acompanham o trabalho da Maiury no Instagram</span></div>
     </div>
-    <div class="sobre-txt rv">
-      <div class="sec-eyebrow">Quem te recebe</div>
-      <h2 class="sec-title">A mão por trás de <em>cada detalhe</em></h2>
-      <p>No Espaço Maiury Oliveira, quem cuida de você é a própria Maiury — do primeiro olhar ao último retoque. Aqui não é uma esteira de atendimentos: é tempo, atenção e técnica dedicados a uma cliente de cada vez.</p>
-      <p>É por isso que cada horário é reservado com cuidado. Quando você agenda, está garantindo um momento que é só seu — no único endereço do Campo Limpo pensado para tratar você como realeza.</p>
-      <a class="btn btn-ghost" onclick="openLogin()">Quero meu horário</a>
+    <div class="frame h-img">
+      <svg class="mo-deco" viewBox="18 16 655 844" aria-hidden="true"><use href="#mo"/></svg>
+      <div class="ph-main"><img src="img/maiury-real.webp" alt="Maiury Oliveira, terapeuta capilar, sorrindo em seu studio" width="1000" height="1039" fetchpriority="high"></div>
+      <div class="ph-mini"><img src="img/hero-mini.webp" alt="Maiury Oliveira no studio" width="460" height="600" style="object-position:50% 20%"></div>
+      <span class="sign" aria-hidden="true">Maiury</span>
     </div>
   </div>
 </section>
 
-<!-- GALERIA -->
-<section class="sec" aria-label="Galeria">
-  <div class="rv">
-    <div class="sec-eyebrow">Nº 02 — O Portfólio</div>
-    <h2 class="sec-title">Transformações <em>reais</em></h2>
-  </div>
-  <div class="gal-wrap">
-    <div class="gal rv" id="galTrack">
-      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1605497788044-5a32c7078486?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal1/700/900'" alt="Cabelo finalizado em salão"><div class="gal-cap">Progressiva Premium</div></div>
-      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1604902396830-aa0b3481d3ca?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal2/700/900'" alt="Nail art dourada"><div class="gal-cap">Manicure Real</div></div>
-      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1487412947147-5cebf100ffc2?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal3/700/900'" alt="Maquiagem profissional"><div class="gal-cap">Make Realeza</div></div>
-      <div class="gal-item wide"><img loading="lazy" src="https://images.unsplash.com/photo-1633681926022-84c23e8cb2d6?w=1400&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal4/1400/540'" alt="Ambiente do salão"><div class="gal-cap">O Espaço · Antes &amp; Depois</div></div>
-      <div class="gal-item"><img loading="lazy" src="https://images.unsplash.com/photo-1519415943484-9fa1873496d4?w=700&q=80&auto=format&fit=crop" onerror="this.onerror=null;this.src='https://picsum.photos/seed/maiury-gal5/700/900'" alt="Pedicure finalizada"><div class="gal-cap">Pedicure Nobre</div></div>
+<!-- 2. SERVIÇOS -->
+<section id="servicos">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag rv">Nossas especialidades</span><h2 class="split">Cuidado em cada detalhe. <em>Beleza em cada experiência.</em></h2><p class="rv">Cada procedimento começa com uma avaliação do seu fio. Arraste para conhecer.</p></div>
+      <div class="nav-arrows rv"><button data-rail="svcRail" data-dir="-1" aria-label="Serviço anterior"><svg viewBox="0 0 24 24"><use href="#arrL"/></svg></button><button data-rail="svcRail" data-dir="1" aria-label="Próximo serviço"><svg viewBox="0 0 24 24"><use href="#arrR"/></svg></button></div>
     </div>
-    <div class="gal-arrs">
-      <button class="gal-arr" onclick="galScroll(-1)" aria-label="Anterior">←</button>
-      <button class="gal-arr" onclick="galScroll(1)" aria-label="Próximo">→</button>
+    <div class="rail" id="svcRail"></div>
+  </div>
+</section>
+
+<!-- 3. QUEM SOU EU -->
+<section class="about" id="sobre">
+  <div class="wrap about-grid">
+    <div class="pic rv">
+      <div class="img"><img class="parallax" src="img/sobre.webp" alt="Maiury Oliveira de braços cruzados em seu studio" width="920" height="941" loading="lazy"></div>
+      <div class="badge"><b>2 anos</b><small>de studio</small></div>
+    </div>
+    <div>
+      <span class="tag rv">Quem sou eu</span>
+      <h2 class="split">Muito além da beleza, uma paixão por <em>transformar experiências.</em></h2>
+      <p class="rv">Sou Maiury Oliveira, terapeuta capilar e especialista em alisamentos. Ao longo da minha trajetória, conheci muitas mulheres que sonhavam com o cabelo liso, mas tinham medo de estragar os fios, ou que já tinham sofrido com procedimentos feitos sem o cuidado necessário.</p>
+      <p class="rv">Foi aí que entendi que beleza e saúde capilar precisam andar juntas. Antes de qualquer química, eu avalio o fio, entendo a rotina de cada cliente e monto um protocolo sob medida, com produtos profissionais como a linha TRUSS.</p>
+      <p class="rv">Há 2 anos abri meu studio em Feira de Santana para oferecer exatamente isso: um espaço acolhedor, um atendimento sem pressa e resultados que fazem cada mulher se olhar no espelho e se sentir mais confiante.</p>
+      <div class="facts rv">
+        <div><b>Formação</b><span class="ph">[PREENCHER]</span></div>
+        <div><b>Especializações</b><span class="ph">[PREENCHER]</span></div>
+      </div>
+      <blockquote class="rv">“Minha missão é proporcionar experiências que valorizem sua beleza, fortaleçam sua autoestima e façam você se sentir ainda mais confiante.”</blockquote>
+      <p class="signature rv" aria-label="Assinatura: Maiury Oliveira">Maiury Oliveira</p>
+      <a class="btn rv" data-wa="sobre" data-msg="Olá, Maiury! Li sobre você no site e quero conversar." href="#"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Vamos conversar?</a>
     </div>
   </div>
 </section>
 
-<!-- DEPOIMENTOS -->
-<section class="sec" aria-label="Depoimentos">
-  <div class="rv">
-    <div class="sec-eyebrow">Nº 03 — As Vozes</div>
-    <h2 class="sec-title">Quem já foi <em>coroada</em></h2>
+<!-- 4. LOCALIZAÇÃO -->
+<section id="localizacao">
+  <div class="wrap">
+    <div class="head"><div><span class="tag rv">Venha nos visitar</span><h2 class="split">Seu momento de cuidado <em>começa aqui.</em></h2></div></div>
+    <div class="loc-grid">
+      <div class="loc-card rv">
+        <div class="img"><img src="img/maiury.webp" alt="Ambiente do Studio Maiury Oliveira" width="900" height="1195" loading="lazy"></div>
+        <div class="loc-info">
+          <div><b>Endereço</b><span data-k="endereco"></span></div>
+          <div><b>Horário de funcionamento</b><span data-k="horario"></span></div>
+          <div><b>Telefone e WhatsApp</b><span data-k="telefone"></span></div>
+          <div class="btns"><a class="btn" data-route href="#" target="_blank" rel="noopener">Como chegar</a><a class="btn ghost" data-wa="localizacao" data-msg="Olá, Maiury! Quero agendar e tirar uma dúvida sobre a localização." href="#">WhatsApp</a></div>
+        </div>
+      </div>
+      <div class="map rv" id="map">
+        <iframe title="Mapa: Studio Maiury Oliveira, Rua Monsenhor Moisés Gonçalves do Couto, 802, Campo Limpo, Feira de Santana" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen src="https://maps.google.com/maps?q=-12.215200,-38.969226&z=17&hl=pt-BR&output=embed"></iframe>
+      </div>
+    </div>
   </div>
-  <div class="dep-grid rv">
-    <div class="dep"><div class="dep-q">"</div><p>Nunca pensei que encontraria algo assim no Campo Limpo. Saí me sentindo uma rainha de verdade.</p><div class="dep-who">Fernanda Rodrigues<span>Cliente do Espaço</span></div></div>
-    <div class="dep"><div class="dep-q">"</div><p>A Maiury tem um dom. Meu cabelo nunca ficou tão bonito. Vale cada centavo.</p><div class="dep-who">Bianca Souza<span>Cliente do Espaço</span></div></div>
-    <div class="dep"><div class="dep-q">"</div><p>O ambiente é lindo e o atendimento da Maiury é impecável. É diferente de tudo que tem na região.</p><div class="dep-who">Carla Andrade<span>Cliente do Espaço</span></div></div>
+</section>
+
+<!-- 5. INSTAGRAM -->
+<section class="ig" id="instagram">
+  <div class="wrap">
+    <div class="head">
+      <div><span class="tag rv">Resultados e experiências</span><h2 class="split">A beleza acontece <em>todos os dias por aqui.</em></h2>
+        <p class="rv">Acompanhe nossos trabalhos, resultados e momentos especiais.</p>
+        <div class="profile rv"><span class="av"><img src="img/maiury-real.webp" alt="" width="52" height="52"></span><div><b>@studiomaiuryoliveira</b><small>Perfil oficial no Instagram</small></div></div>
+      </div>
+      <div class="nav-arrows rv"><button data-rail="igRail" data-dir="-1" aria-label="Publicação anterior"><svg viewBox="0 0 24 24"><use href="#arrL"/></svg></button><button data-rail="igRail" data-dir="1" aria-label="Próxima publicação"><svg viewBox="0 0 24 24"><use href="#arrR"/></svg></button></div>
+    </div>
+    <div class="rail" id="igRail"></div>
+    <div class="ig-cta rv"><p>Gostou do que viu? Acompanhe nosso trabalho e fique por dentro de todas as novidades.</p><a class="btn" data-ig href="#" target="_blank" rel="noopener"><svg viewBox="0 0 24 24"><use href="#ig"/></svg>Siga-nos no Instagram</a></div>
+  </div>
+</section>
+
+<!-- 6. CTA FINAL -->
+<section class="final">
+  <div class="bg"><img class="parallax2" src="img/cta-bg.webp" alt="" width="1671" height="941" loading="lazy"></div>
+  <div class="wrap">
+    <span class="tag rv">Agende agora</span>
+    <h2 class="split">Você merece viver <em>essa experiência.</em></h2>
+    <p class="rv">Reserve um momento para cuidar de você. Estamos prontas para receber você com todo carinho e profissionalismo.</p>
+    <a class="btn light rv" data-wa="cta-final" data-msg="Olá, Maiury! Vim pelo site e quero agendar meu horário." href="#"><svg viewBox="0 0 24 24"><use href="#wa"/></svg>Agendar meu horário</a>
+    <p class="mini rv">Resposta pelo WhatsApp · <span data-k="horario"></span></p>
   </div>
 </section>
 </main>
 
-<!-- CTA FINAL -->
-<section class="cta" aria-label="Agendar">
-  <h2 class="rv">Sua coroação tem <em>hora marcada.</em></h2>
-  <p class="rv">Espaço Maiury Oliveira · Campo Limpo · Feira de Santana</p>
-  <a class="btn btn-ouro rv" onclick="openLogin()">Agendar Meu Horário</a>
-</section>
-
-<!-- FOOTER -->
+<!-- 7. FOOTER -->
 <footer>
-  <div class="ft-grid">
-    <div>
-      <div class="ft-logo">Espaço Maiury Oliveira</div>
-      <p class="ft-slogan">"Onde toda mulher descobre que já nasceu rainha."</p>
+  <div class="wrap">
+    <div class="fcols">
+      <div>
+        <a href="#inicio" class="brand"><svg class="mo" viewBox="18 16 655 844"><use href="#mo"/></svg><span><b>Maiury Oliveira</b><small>Studio de beleza</small></span></a>
+        <p class="slogan">Cuidado que transforma.</p>
+        <p>Studio de beleza em Feira de Santana especializado em alisamentos, terapia capilar e cuidado personalizado.</p>
+      </div>
+      <div><h4>Navegação</h4><ul><li><a href="#inicio">Início</a></li><li><a href="#servicos">Serviços</a></li><li><a href="#sobre">Quem somos</a></li><li><a href="#localizacao">Localização</a></li><li><a href="#instagram">Instagram</a></li><li><a data-wa="footer-contato" href="#">Contato</a></li></ul></div>
+      <div><h4>Serviços</h4><ul id="fServices"></ul></div>
+      <div><h4>Contato</h4><ul>
+        <li><a data-wa="footer" href="#">WhatsApp <span data-k="telefone"></span></a></li>
+        <li>E-mail: <span data-k="email"></span></li>
+        <li><span data-k="endereco"></span></li>
+        <li><span data-k="horario"></span></li></ul></div>
+      <div><h4>Redes sociais</h4><ul><li><a data-ig href="#" target="_blank" rel="noopener">Instagram</a></li></ul></div>
     </div>
-    <div>
-      <div class="ft-h">Atendimento</div>
-      <span class="ft-item">Terça a Sábado</span>
-      <span class="ft-item">08h às 20h</span>
-      <span class="ft-item">Campo Limpo, Feira de Santana — BA</span>
+    <div class="legal">
+      <nav aria-label="Informações legais"><button data-dlg="privacidade">Política de Privacidade</button><button data-dlg="cookies">Política de Cookies</button><button data-dlg="termos">Termos de Uso</button></nav>
+      <span>© <span id="year"></span> Studio Maiury Oliveira. Todos os direitos reservados. · Desenvolvido por ForYou</span>
     </div>
-    <div>
-      <div class="ft-h">Conecte-se</div>
-      <a class="ft-item" href="https://instagram.com/espaco_maiuryoliveira" target="_blank" rel="noopener" aria-label="Instagram do salão">@espaco_maiuryoliveira</a>
-      <a class="ft-item" href="#servicos">Serviços</a>
-      <a class="ft-item" onclick="openLogin()" style="cursor:pointer">Minha conta</a>
-    </div>
-  </div>
-  <div class="ft-bottom">
-    <span>© 2025 Espaço Maiury Oliveira</span>
-    <span>Feito com amor pela sua beleza ✦</span>
+    <p class="lgpd">Seus dados são tratados conforme a Lei Geral de Proteção de Dados (Lei nº 13.709/2018). Usamos as informações enviadas pelo WhatsApp apenas para agendamento e atendimento.</p>
   </div>
 </footer>
 
-<!-- MODAL: SOLICITAR HORÁRIO -->
-<div class="molov" id="loginModal" role="dialog" aria-modal="true" aria-label="Solicitar horário">
-  <div class="mol">
-    <div class="mol-head"><div class="mol-title">Solicitar Horário</div><button class="mol-x" onclick="closeLogin()" aria-label="Fechar">✕</button></div>
-    <div class="mol-sub">Responderemos em breve pelo WhatsApp</div>
+<a class="wa-float" data-wa="flutuante" href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 24 24"><use href="#wa"/></svg></a>
+<button class="top" aria-label="Voltar ao topo"><svg viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M6 14l6-6 6 6"/></svg></button>
 
-    <div id="reqForm">
-      <div class="mol-err" id="molErr">Preencha nome, telefone e serviço.</div>
-      <div class="fld"><label>Seu nome</label><input type="text" id="rNome" placeholder="Maria Fernanda" autocomplete="name"></div>
-      <div class="fld"><label>Telefone (WhatsApp)</label><input type="tel" id="rTel" placeholder="(75) 99999-9999" maxlength="15" autocomplete="tel"></div>
-      <div class="fld">
-        <label>Serviço</label>
-        <select id="rServico">
-          <option value="">Selecione...</option>
-        </select>
-      </div>
-      <div class="fld-row">
-        <div class="fld"><label>Data preferida</label><input type="date" id="rData"><small class="fld-hint">Atendemos de terça a sábado</small></div>
-        <div class="fld"><label>Horário preferido</label><input type="time" id="rHora" min="08:00" max="20:00" step="1800" value="09:00"><small class="fld-hint">Entre 08h e 20h</small></div>
-      </div>
-      <div class="fld"><label>Observações (opcional)</label><input type="text" id="rObs" placeholder="Alguma preferência ou detalhe?"></div>
-      <button class="mol-btn" onclick="submitRequest()">Solicitar Horário</button>
-      <div class="mol-or"><span>ou</span></div>
-      <a class="mol-wa" onclick="abrirWhatsApp()">
-        <svg viewBox="0 0 24 24" width="17" height="17" fill="currentColor" aria-hidden="true"><path d="M17.5 14.4c-.3-.1-1.7-.8-2-.9-.3-.1-.5-.1-.7.1-.2.3-.7.9-.9 1.1-.2.2-.3.2-.6.1-.3-.1-1.2-.5-2.3-1.4-.9-.8-1.4-1.7-1.6-2-.2-.3 0-.5.1-.6l.4-.5c.1-.2.2-.3.3-.5.1-.2 0-.4 0-.5l-.9-2.1c-.2-.5-.4-.5-.6-.5h-.6c-.2 0-.5.1-.7.3-.3.3-1 .9-1 2.3s1 2.7 1.1 2.9c.1.2 2 3.1 4.9 4.3.7.3 1.2.5 1.6.6.7.2 1.3.2 1.8.1.6-.1 1.7-.7 1.9-1.3.2-.7.2-1.2.2-1.3-.1-.2-.3-.2-.6-.4zM12 2a10 10 0 00-8.6 15l-1.3 4.8 4.9-1.3A10 10 0 1012 2z"/></svg>
-        Prefiro falar no WhatsApp
-      </a>
-      <p class="mol-note">Seu pedido fica <em>pendente</em> até a Maiury confirmar pelo WhatsApp. Atendimento de terça a sábado, 08h às 20h.</p>
-    </div>
+<dialog id="dlg"><h3></h3><div class="c"></div><button class="btn" type="button" onclick="this.closest('dialog').close()">Fechar</button></dialog>
 
-    <div id="reqDone" style="display:none;text-align:center;padding:10px 0 4px">
-      <div class="done-crown">👑</div>
-      <div class="mol-title" style="font-size:26px;margin-bottom:6px">Pedido enviado!</div>
-      <p class="mol-note" style="margin:0 0 22px">A Maiury vai confirmar seu horário pelo WhatsApp em breve. Até logo, futura rainha ✦</p>
-      <button class="mol-btn" onclick="closeLogin()">Fechar</button>
-    </div>
-  </div>
-</div>
-
-
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/gsap.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/ScrollTrigger.min.js"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/gsap@3.15.1/dist/SplitText.min.js"></script>
 <script>
-/* ════════════════════════════════════════
-   ESPAÇO MAIURY OLIVEIRA — Landing JS
-   Realeza Negra Editorial · Vanilla JS
-════════════════════════════════════════ */
+/* =====================================================
+   DADOS EDITÁVEIS — altere aqui sem mexer no layout
+   ===================================================== */
+var SITE={
+  whatsapp:'5575982322378',
+  telefone:'(75) 98232-2378',
+  email:'[PREENCHER: e-mail]',
+  endereco:'Rua Monsenhor Moisés Gonçalves do Couto, 802 · Campo Limpo · Feira de Santana – BA · CEP 44033-403',
+  horario:'[PREENCHER: dias e horários]',
+  mapsQuery:'-12.215200,-38.969226',
+  instagram:'https://www.instagram.com/studiomaiuryoliveira/',
+  msgPadrao:'Olá, Maiury! Vim pelo site e quero agendar.',
+  servicos:[
+    {nome:'Alisamentos',img:'img/svc-alisamento.webp',pos:'50% 35%',desc:'Liso alinhado, com brilho e caimento natural. Produto e técnica escolhidos depois da avaliação do seu fio.',cta:'Agendar',msg:'Olá, Maiury! Quero agendar um alisamento.'},
+    {nome:'Terapia capilar',img:'img/svc-terapia.webp',pos:'50% 30%',desc:'Tratamentos personalizados de reconstrução, nutrição e hidratação para devolver força e vida aos fios.',cta:'Agendar',msg:'Olá, Maiury! Quero saber mais sobre a terapia capilar.'},
+    {nome:'Cortes',img:'img/svc-corte.webp',pos:'50% 45%',desc:'Corte que valoriza o seu rosto e mantém as pontas saudáveis, antes ou depois do tratamento.',cta:'Agendar',msg:'Olá, Maiury! Quero agendar um corte.'},
+    {nome:'Home care',img:'img/svc-homecare.webp',pos:'60% 55%',desc:'Indicação dos produtos profissionais certos para o resultado do studio durar muito mais em casa.',cta:'Saiba mais',msg:'Olá, Maiury! Quero indicação de home care.'}
+  ],
+  /* publicações do Instagram: troque img/legenda e cole o link de cada post (url). Para vídeo use {video:'arquivo.mp4', poster:'img.webp'} */
+  posts:[
+    {img:'img/maiury.webp',legenda:'Iluminado com brilho e movimento',url:''},
+    {img:'img/g2.webp',legenda:'Resultado de cliente no studio',url:''},
+    {img:'img/h-ombro.webp',legenda:'Fios alinhados e macios',url:''},
+    {img:'img/g1.webp',legenda:'Bastidores: linha profissional',url:''},
+    {img:'img/r-left.webp',legenda:'Ondas com leveza',url:''},
+    {img:'img/h-mecha.webp',legenda:'Detalhe das mechas',url:''}
+  ]
+};
 
-// ⚠️ TROCAR pelo WhatsApp real da Maiury (formato: 55 + DDD + número)
-const WHATSAPP_MAIURY = '5575982727760';
+(function(){
+  var S=SITE,origem='';
+  try{var q=new URLSearchParams(location.search),s=q.get('utm_source');if(s)origem=' (origem: '+s+')'}catch(e){}
+  function wa(m){return 'https://wa.me/'+S.whatsapp+'?text='+encodeURIComponent((m||S.msgPadrao)+origem)}
+  function esc(t){var d=document.createElement('div');d.textContent=t;return d.innerHTML}
+  function phWrap(t){return /\[(PREENCHER|CONFIRMAR)/.test(t)?'<span class="ph">'+esc(t)+'</span>':esc(t)}
+  // serviços
+  document.getElementById('svcRail').innerHTML=S.servicos.map(function(v,i){
+    return '<article class="svc rv"><figure><img src="'+v.img+'" alt="'+esc(v.nome)+'" loading="lazy" style="object-position:'+(v.pos||'50% 25%')+'"><span>'+String(i+1).padStart(2,'0')+'</span></figure><div class="b"><h3>'+esc(v.nome)+'</h3><p>'+esc(v.desc)+'</p><a class="btn" data-wa="servico-'+i+'" data-msg="'+esc(v.msg)+'" href="#">'+esc(v.cta)+'</a></div></article>'}).join('');
+  document.getElementById('fServices').innerHTML=S.servicos.map(function(v){return '<li><a href="#servicos">'+esc(v.nome)+'</a></li>'}).join('');
+  // instagram
+  document.getElementById('igRail').innerHTML=S.posts.map(function(p){
+    var media=p.video?'<video src="'+p.video+'" poster="'+(p.poster||'')+'" muted loop playsinline preload="none"></video>':'<img src="'+p.img+'" alt="'+esc(p.legenda)+'" loading="lazy">';
+    return '<a class="post rv" href="'+(p.url||S.instagram)+'" target="_blank" rel="noopener">'+media+'<span class="ic"><svg viewBox="0 0 24 24"><use href="#ig"/></svg></span><span class="cap">'+esc(p.legenda)+'</span></a>'}).join('');
+  // dados
+  document.querySelectorAll('[data-k]').forEach(function(el){el.innerHTML=phWrap(S[el.dataset.k]||'')});
+  document.querySelectorAll('[data-ig]').forEach(function(a){a.href=S.instagram});
+  var route='https://www.google.com/maps/dir/?api=1&destination='+encodeURIComponent(S.mapsQuery);
+  document.querySelectorAll('[data-route]').forEach(function(a){a.href=route});
+  // WhatsApp em todos os botões
+  document.querySelectorAll('[data-wa]').forEach(function(a){
+    a.href=wa(a.dataset.msg);a.target='_blank';a.rel='noopener';
+    a.addEventListener('click',function(){window.dataLayer=window.dataLayer||[];dataLayer.push({event:'click_whatsapp',secao:a.dataset.wa});if(window.gtag)gtag('event','click_whatsapp',{secao:a.dataset.wa});if(window.fbq)fbq('track','Contact')});
+  });
+  // carrosséis: setas + arrastar com mouse
+  document.querySelectorAll('[data-rail]').forEach(function(b){b.addEventListener('click',function(){var r=document.getElementById(b.dataset.rail);r.scrollBy({left:(r.firstElementChild.offsetWidth+22)*b.dataset.dir,behavior:'smooth'})})});
+  document.querySelectorAll('.rail').forEach(function(r){
+    var down=false,x0,s0,moved=false;
+    r.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=r.scrollLeft});
+    addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>5){moved=true;r.classList.add('drag')}r.scrollLeft=s0-dx});
+    addEventListener('pointerup',function(){if(!down)return;down=false;r.classList.remove('drag')});
+    r.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false}},true);
+    r.addEventListener('dragstart',function(e){e.preventDefault()});
+  });
+  // menu mobile
+  var mn=document.querySelector('.mnav'),bg=document.querySelector('.burger');
+  function tog(o){mn.classList.toggle('open',o);mn.setAttribute('aria-hidden',!o);bg.setAttribute('aria-expanded',o);document.body.style.overflow=o?'hidden':''}
+  bg.addEventListener('click',function(){tog(true)});mn.querySelector('.close').addEventListener('click',function(){tog(false)});
+  mn.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){tog(false)})});
+  // header, topo, ano
+  var h=document.querySelector('header'),tp=document.querySelector('.top');
+  function sc(){h.classList.toggle('scrolled',scrollY>60);tp.classList.toggle('show',scrollY>innerHeight)}
+  addEventListener('scroll',sc,{passive:true});sc();
+  tp.addEventListener('click',function(){scrollTo({top:0,behavior:'smooth'})});
+  document.getElementById('year').textContent=new Date().getFullYear();
+  // modais legais
+  var TX={privacidade:['Política de Privacidade','<p>O Studio Maiury Oliveira respeita a sua privacidade. Os dados que você envia pelo WhatsApp (nome, telefone e informações sobre o seu cabelo) são usados somente para agendamento e atendimento, e não são vendidos nem compartilhados com terceiros.</p><p>Você pode pedir a correção ou exclusão dos seus dados a qualquer momento pelo WhatsApp. <span class="ph">[REVISAR texto final com a cliente]</span></p>'],
+    cookies:['Política de Cookies','<p>Este site pode usar cookies de medição (Google Analytics e Meta Pixel) para entender quantas pessoas visitam a página e de onde vêm. Eles só são ativados com o seu consentimento. <span class="ph">[ATIVAR banner de consentimento ao configurar GA4/Pixel]</span></p>'],
+    termos:['Termos de Uso','<p>As informações deste site têm caráter informativo. Valores, disponibilidade e indicação de procedimentos são confirmados no atendimento, após a avaliação dos fios. <span class="ph">[REVISAR com a cliente]</span></p>']};
+  var dlg=document.getElementById('dlg');
+  document.querySelectorAll('[data-dlg]').forEach(function(b){b.addEventListener('click',function(){var t=TX[b.dataset.dlg];dlg.querySelector('h3').textContent=t[0];dlg.querySelector('.c').innerHTML=t[1];dlg.showModal()})});
+})();
 
-// ── DADOS DOS SERVIÇOS ──────────────────
-const SERVICOS = [
-  {n:'01',nome:'Progressiva Premium',desc:'Alisamento sem formol, brilho e maciez reais',dur:'3h',preco:280,img:'https://picsum.photos/seed/maiury-svc1/700/900'},
-  {n:'02',nome:'Manicure Real',desc:'Gel de longa duração com nail art exclusivo',dur:'1h',preco:90,img:'https://picsum.photos/seed/maiury-svc2/700/900'},
-  {n:'03',nome:'Extensão de Cílios',desc:'Fio a fio para efeito natural irresistível',dur:'2h30',preco:200,img:'https://picsum.photos/seed/maiury-svc3/700/900'},
-  {n:'04',nome:'Design de Sobrancelha',desc:'Modelagem + henna, sobrancelhas definidas',dur:'45min',preco:75,img:'https://picsum.photos/seed/maiury-svc4/700/900'},
-  {n:'05',nome:'Hidratação Facial',desc:'Tratamento profundo com ativos premium',dur:'1h30',preco:140,img:'https://picsum.photos/seed/maiury-svc5/700/900'},
-  {n:'06',nome:'Make Realeza',desc:'Maquiagem artística para eventos e noivas',dur:'1h30',preco:180,img:'https://picsum.photos/seed/maiury-svc6/700/900'},
-  {n:'07',nome:'Hidratação Capilar',desc:'Nutrição profunda com proteínas e brilho',dur:'1h',preco:100,img:'https://picsum.photos/seed/maiury-svc7/700/900'},
-  {n:'08',nome:'Pedicure Nobre',desc:'Cuidado completo com esmaltação e hidratação',dur:'1h',preco:70,img:'https://picsum.photos/seed/maiury-svc8/700/900'},
-];
-
-// ── RENDER SERVIÇOS (índice editorial) ──
-function renderServicos(){
-  const list = document.getElementById('svcList');
-  list.innerHTML = SERVICOS.map(s => `
-    <div class="svc-row" data-img="${s.img}" onclick="abrirComServico('${s.nome.replace(/'/g,"\\'")}')">
-      <div class="svc-num">Nº ${s.n}</div>
-      <div class="svc-thumb"><img loading="lazy" src="${s.img}" alt="${s.nome}"></div>
-      <div class="svc-name">${s.nome}<small>${s.desc}</small></div>
-      <div class="svc-dur">${s.dur}</div>
-      <div class="svc-price">R$ ${s.preco}</div>
-      <div class="svc-arrow">→</div>
-    </div>`).join('');
-
-  // popular select do formulário
-  const sel = document.getElementById('rServico');
-  sel.innerHTML = '<option value="">Selecione...</option>' +
-    SERVICOS.map(s=>`<option value="${s.nome}">${s.nome} — R$ ${s.preco} (${s.dur})</option>`).join('');
-}
-
-// ── FOTO FLUTUANTE (hover desktop) ──────
-function initFloatImg(){
-  if(window.matchMedia('(hover: none)').matches) return;
-  const float = document.getElementById('floatImg');
-  const img = float.querySelector('img');
-  document.querySelectorAll('.svc-row').forEach(row=>{
-    row.addEventListener('mouseenter',()=>{
-      img.src = row.dataset.img;
-      float.classList.add('on');
+/* animações */
+window.addEventListener('DOMContentLoaded',function(){
+  if(matchMedia('(prefers-reduced-motion: reduce)').matches||!window.gsap){document.querySelectorAll('.rv').forEach(function(e){e.style.opacity=1;e.style.transform='none'});return}
+  gsap.registerPlugin(ScrollTrigger,SplitText);
+  document.fonts.ready.then(function(){
+    document.querySelectorAll('.split').forEach(function(el,i){
+      var s=SplitText.create(el,{type:'lines',mask:'lines'});
+      var c={yPercent:105,duration:1.1,ease:'expo.out',stagger:.09};
+      if(i===0)gsap.from(s.lines,Object.assign(c,{delay:.2}));else gsap.from(s.lines,Object.assign(c,{scrollTrigger:{trigger:el,start:'top 86%'}}));
     });
-    row.addEventListener('mousemove',e=>{
-      float.style.left = (e.clientX + 30) + 'px';
-      float.style.top  = (e.clientY - 170) + 'px';
-    });
-    row.addEventListener('mouseleave',()=> float.classList.remove('on'));
   });
-}
-
-// ── CURSOR-JOIA ──────────────────────────
-function initCursor(){
-  if(window.matchMedia('(hover: none)').matches) return;
-  const cursor = document.getElementById('cursor');
-  window.addEventListener('mousemove', e=>{
-    cursor.style.left = e.clientX + 'px';
-    cursor.style.top  = e.clientY + 'px';
-  });
-  document.querySelectorAll('a,button,.svc-row,.gal-item').forEach(el=>{
-    el.addEventListener('mouseenter',()=>cursor.classList.add('grow'));
-    el.addEventListener('mouseleave',()=>cursor.classList.remove('grow'));
-  });
-}
-
-// ── PARALLAX SUTIL NO HERO ───────────────
-function initParallax(){
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
-  const img = document.getElementById('heroImg');
-  window.addEventListener('scroll',()=>{
-    const y = window.scrollY;
-    if(y < window.innerHeight) img.style.transform = `translateY(${y*0.12}px)`;
-  });
-}
-
-// ── CARROSSEL GALERIA ─────────────────────
-function galScroll(dir){
-  const track = document.getElementById('galTrack');
-  const card = track.querySelector('.gal-item');
-  const step = card.getBoundingClientRect().width + 14; // largura + gap
-  track.scrollBy({left: dir*step, behavior:'smooth'});
-}
-
-// ── REVEAL ON SCROLL ──────────────────────
-function initReveal(){
-  const els = document.querySelectorAll('.rv');
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target); } });
-  },{threshold:.01,rootMargin:'0px 0px -10% 0px'});
-  els.forEach(el=>io.observe(el));
-}
-
-// ── COUNT-UP ──────────────────────────────
-function initCountUp(){
-  const stats = document.querySelectorAll('.stat-n');
-  const io = new IntersectionObserver(entries=>{
-    entries.forEach(e=>{
-      if(!e.isIntersecting) return;
-      const el = e.target;
-      const target = parseInt(el.dataset.count,10);
-      const prefix = el.dataset.prefix || '';
-      const dur = 1400, start = performance.now();
-      function tick(now){
-        const p = Math.min((now-start)/dur,1);
-        const eased = 1 - Math.pow(1-p,3);
-        el.textContent = prefix + Math.round(eased*target);
-        if(p<1) requestAnimationFrame(tick);
-      }
-      requestAnimationFrame(tick);
-      io.unobserve(el);
-    });
-  },{threshold:.5});
-  stats.forEach(el=>io.observe(el));
-}
-
-// ── TOPBAR SCROLL STATE ───────────────────
-function initTopbar(){
-  const tb = document.getElementById('topbar');
-  window.addEventListener('scroll',()=> tb.classList.toggle('scrolled', window.scrollY>60), {passive:true});
-}
-
-// ── MODAL: SOLICITAR HORÁRIO ──────────────
-function openLogin(){
-  document.getElementById('loginModal').classList.add('show');
-  document.getElementById('reqForm').style.display='block';
-  document.getElementById('reqDone').style.display='none';
-  document.getElementById('molErr').classList.remove('show');
-}
-function closeLogin(){ document.getElementById('loginModal').classList.remove('show'); }
-function abrirComServico(nome){
-  openLogin();
-  document.getElementById('rServico').value = nome;
-}
-
-function rawPhone(v){ return (v||'').replace(/\D/g,''); }
-function sanitize(v){ return (v||'').replace(/[<>"'&]/g,'').trim(); }
-function fmtDataBR(ds){ if(!ds) return ''; const [y,m,d]=ds.split('-'); return `${d}/${m}/${y}`; }
-document.addEventListener('input', e=>{
-  if(e.target.id==='rTel'){
-    let d = e.target.value.replace(/\D/g,'').slice(0,11);
-    e.target.value = !d?'': d.length<=2?'('+d : d.length<=7?'('+d.slice(0,2)+') '+d.slice(2) : '('+d.slice(0,2)+') '+d.slice(2,7)+'-'+d.slice(7);
-  }
-});
-
-function montarMensagem(){
-  const nome = sanitize(document.getElementById('rNome').value);
-  const tel  = document.getElementById('rTel').value;
-  const svc  = document.getElementById('rServico').value;
-  const data = document.getElementById('rData').value;
-  const hora = document.getElementById('rHora').value;
-  const obs  = sanitize(document.getElementById('rObs').value);
-  let m = `Olá, Maiury! Gostaria de solicitar um horário no Espaço Maiury Oliveira ✨\n\n`;
-  m += `*Nome:* ${nome||'—'}\n`;
-  if(svc)  m += `*Serviço:* ${svc}\n`;
-  if(data) m += `*Data preferida:* ${fmtDataBR(data)}\n`;
-  if(hora) m += `*Horário preferido:* ${hora}\n`;
-  if(obs)  m += `*Observações:* ${obs}\n`;
-  return encodeURIComponent(m);
-}
-
-function abrirWhatsApp(){
-  const nome = sanitize(document.getElementById('rNome').value);
-  const svc  = document.getElementById('rServico').value;
-  if(!nome || !svc){ document.getElementById('molErr').classList.add('show'); return; }
-  window.open(`https://wa.me/${WHATSAPP_MAIURY}?text=${montarMensagem()}`, '_blank');
-}
-
-function submitRequest(){
-  const nome = sanitize(document.getElementById('rNome').value);
-  const tel  = rawPhone(document.getElementById('rTel').value);
-  const svc  = document.getElementById('rServico').value;
-  const err  = document.getElementById('molErr');
-
-  if(!nome || tel.length<10 || !svc){ err.classList.add('show'); return; }
-  err.classList.remove('show');
-
-  const pedido = {
-    id: Date.now(),
-    nome, telefone: tel,
-    servico: svc,
-    data: document.getElementById('rData').value,
-    hora: document.getElementById('rHora').value,
-    obs: sanitize(document.getElementById('rObs').value),
-    status: 'pendente',
-    criadoEm: new Date().toISOString()
-  };
-  const pedidos = JSON.parse(localStorage.getItem('emo_pedidos')||'[]');
-  pedidos.push(pedido);
-  localStorage.setItem('emo_pedidos', JSON.stringify(pedidos));
-
-  // Abre o WhatsApp da Maiury com o pedido pronto
-  window.open(`https://wa.me/${WHATSAPP_MAIURY}?text=${montarMensagem()}`, '_blank');
-
-  document.getElementById('reqForm').style.display='none';
-  document.getElementById('reqDone').style.display='block';
-}
-
-function showToast(msg){
-  const t = document.getElementById('toast');
-  t.textContent = msg; t.classList.add('show');
-  clearTimeout(window._tt);
-  window._tt = setTimeout(()=>t.classList.remove('show'), 2800);
-}
-
-// ── PRELOADER ──────────────────────────────
-function initPreloader(){
-  const pre = document.getElementById('pre');
-  const done = ()=> pre.classList.add('done');
-  if(window.matchMedia('(prefers-reduced-motion: reduce)').matches){ done(); return; }
-  setTimeout(done, 1400);
-}
-
-// ── BOOT ───────────────────────────────────
-window.addEventListener('DOMContentLoaded', ()=>{
-  renderServicos();
-  initPreloader();
-  initCursor();
-  initTopbar();
-  initReveal();
-  initCountUp();
-  initFloatImg();
-  initParallax();
-
-  // fecha modal clicando fora
-  document.getElementById('loginModal').addEventListener('click', e=>{
-    if(e.target.id==='loginModal') closeLogin();
-  });
-  document.addEventListener('keydown', e=>{
-    if(e.key==='Escape') closeLogin();
-  });
-
-  // data mínima = hoje, e bloqueia domingo/segunda no input
-  const rData = document.getElementById('rData');
-  const hoje = new Date();
-  rData.min = hoje.toISOString().slice(0,10);
-  rData.addEventListener('input', ()=>{
-    const d = new Date(rData.value+'T12:00:00');
-    const dia = d.getDay(); // 0=dom,1=seg
-    if(dia===0 || dia===1){
-      showToast('Atendemos de terça a sábado — escolha outra data');
-      rData.value='';
-    }
-  });
+  gsap.from('.h-in',{y:22,opacity:0,duration:.9,ease:'power3.out',stagger:.1,delay:.55});
+  gsap.from('.frame .ph-main',{clipPath:'inset(100% 0 0 0 round 260px 260px 16px 16px)',duration:1.4,ease:'expo.out',delay:.1});
+  gsap.from('.frame .ph-mini',{y:40,opacity:0,duration:1,ease:'power3.out',delay:.8});
+  gsap.from('.frame .sign',{opacity:0,x:-20,duration:1.2,ease:'power2.out',delay:1.1});
+  ScrollTrigger.batch('.rv',{start:'top 90%',once:true,onEnter:function(b){gsap.to(b,{opacity:1,y:0,duration:.8,ease:'power3.out',stagger:.08,overwrite:true})}});
+  gsap.to('.parallax',{yPercent:-10,ease:'none',scrollTrigger:{trigger:'.about .pic',start:'top bottom',end:'bottom top',scrub:true}});
+  gsap.fromTo('.parallax2',{yPercent:-6,scale:1.12},{yPercent:6,ease:'none',scrollTrigger:{trigger:'.final',start:'top bottom',end:'bottom top',scrub:true}});
 });
 </script>
 </body>
